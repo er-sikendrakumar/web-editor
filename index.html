@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-EDITOR</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+        <script src="assets/js/web-editor-jquery.min.js"></script>
+
+</head>
+<body>
+    <main class="wrapper">
+        <div class="sidebar sidebar-main-box" id="sidebar">
+            <span class="close-sidebar d-lg-none txt-red">×</span>
+            <div class="sidebar-content">
+                <div class="logo">
+                <img src="assets/images/web-dash-white.png" alt="WEB-EDITOR" class="img-fluid">
+                </div>
+                <nav class="nav side-nav-box flex-column">
+                    <a class="nav-link active" href="index.html">
+                        <i class="fa-solid fa-gauge-high me-2"></i>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a class="nav-link" href="all-sites.html">
+                        <i class="fa-solid fa-globe me-2"></i>
+                        <span>All Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="pending-registrations.html">
+                        <i class="fa-solid fa-user-clock me-2"></i>
+                        <span>Pending Registrations</span>
+                    </a>
+
+                    <a class="nav-link" href="site-builder.html">
+                        <i class="fa-solid fa-layer-group me-2"></i>
+                        <span>Site Builder</span>
+                    </a>
+
+                    <a class="nav-link" href="all-users.html">
+                        <i class="fa-solid fa-users me-2"></i>
+                        <span>All Users</span>
+                    </a>
+
+                    <a class="nav-link" href="site-agency.html">
+                        <i class="fa-solid fa-building-user me-2"></i>
+                        <span>Agency Assigned Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="user-sites.html">
+                        <i class="fa-solid fa-user-check me-2"></i>
+                        <span>User Assigned Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="subscriptions.html">
+                        <i class="fa-solid fa-receipt me-2"></i>
+                        <span>Subscriptions</span>
+                    </a>
+
+                    <a class="nav-link" href="support.html">
+                        <i class="fa-solid fa-headset me-2"></i>
+                        <span>Support</span>
+                    </a> 
+                    <a class="nav-link" href="settings.html">
+                        <i class="fa-solid fa-gear me-2"></i>
+                        <span>Settings</span>
+                    </a>
+
+                    <a class="nav-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640" fill="white">
+                          <path d="M160 96C142.3 96 128 110.3 128 128C128 145.7 142.3 160 160 160L288 160L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 160L480 160C497.7 160 512 145.7 512 128C512 110.3 497.7 96 480 96L160 96z"></path>
+                        </svg>
+                        <span>Toolbox</span>
+                    </a>
+
+                </nav>
+            </div>
+            <form method="POST">
+                <input type="hidden" name="_token"  autocomplete="off">  
+                <button type="submit" class="signout-btn"><span>Sign out</span>
+                    <i class="fa-solid fa-right-from-bracket ms-2"></i>
+                </button>
+            </form>
+        </div>
+
+         <!-- Main Content -->
+        <div class="main-content">
+      
+            <!-- Top Header -->
+            <div class="top-header-wrapper">
+                <div class="top-header d-flex justify-content-between align-items-center ">
+                <div class="hamburger d-flex align-items-center" id="toggleSidebar">
+                    <img src="assets/images/humburger.png" class="img-fluid" alt="">
+                    <h2>Dashboard</h2>
+                </div>
+
+                <!-- User Profile Section -->
+                <div class="profile-box d-flex align-items-center">
+                    <div class="text-end me-3">
+                        <h5 class="profile-title">Super Admin</h5>
+                        <p class="profile-role text-muted">Super Admin</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Main Dashboard Content -->
+            <div class="dashboard-content">
+                <div class="">
+
+                    <!-- Stat Cards -->
+                    <div class="row g-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                                <a href="#"><div class="card-stat card-purple">
+                                    <div class="card-content dash-card">
+                                        <p>Total Sites</p>
+                                        <h3 class="stat-count">870</h3>
+                                    </div>
+                                    <div class="dash-card-img">
+                                        <i class="fa-solid fa-globe"></i>
+                                    </div>
+                                </div></a>
+                        </div>
+
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <a href="#"><div class="card-stat card-teal">
+                                <div class="card-content dash-card">
+                                    <p>Active Users</p>
+                                    <h3 class="stat-count">6</h3>
+                                </div>
+                                <div class="dash-card-img">
+                                    <i class="fa-solid fa-users"></i>
+                                </div>
+                            </div></a>
+
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <a href="#"><div class="card-stat card-orange">
+                                <div class="card-content dash-card">
+                                    <p>No. Agencies</p>
+                                    <h3 class="stat-count">2</h3>
+                                </div>
+                                <div class="dash-card-img">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </div>
+                            </div></a>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <a href="#"><div class="card-stat card-red">
+                                <div class="card-content dash-card">
+                                    <p class="">Published Sites</p>
+                                    <h3 class="stat-count">252</h3>
+                                </div>
+                                <div class="dash-card-img">
+                                    <i class="fa-solid fa-check-circle"></i>
+                                </div>
+                            </div></a>
+                        </div>
+                    </div>
+
+                    <!-- Charts Role (Pie) -->
+                    <div class="row mt-4 g-3">
+                        <div class="col-12 col-xl-6 col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-white">
+                                    <h5 class="mb-0">Users by Role</h5>
+                                </div>
+                                <div class="card-body card-body-role">
+                                    <canvas id="usersByRoleChart" width="348" height="348" style="display: block; box-sizing: border-box; height: 348px; width: 348px;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Published/Unpublished-->
+                        <div class="col-12 col-xl-6 col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-white">
+                                    <h5 class="mb-0">Publish Activity This Month</h5>
+                                    <small class="text-muted">Newly published vs. Unpublished</small>
+                                </div>
+                                <div class="card-body card-body-role">
+                                    <canvas id="publishActivityChart" height="217" width="703" style="display: block; box-sizing: border-box; height: 217.8px; width: 703px;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Charts Row -->
+                    <div class="row mt-4 g-3">
+                        <div class="col-12 col-xl-6 col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-white">
+                                    <h5 class="mb-0">Total Published Sites Per Month</h5>
+                                    <small class="text-muted">Monthly published vs. unpublished</small>
+                                </div>
+                                <div class="card-body card-body-role">
+                                    <canvas id="yearlyPublishActivityChart" height="138" width="447" style="display: block; box-sizing: border-box; height: 138.8px; width: 447px;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-6 col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header bg-white">
+                                    <h5 class="mb-0">Created Websites</h5>
+                                    <small class="text-muted">Previous month vs. this month</small>
+                                </div>
+                                <div class="card-body card-body-role">
+                                    <canvas id="createdSitesChart" height="138" width="447" style="display: block; box-sizing: border-box; height: 138.8px; width: 447px;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Charts Row -->
+                    <div class="row mt-4 g-3">
+
+                        <!-- Recent Lists -->
+                        <div class="col-12 col-xl-12">
+                            <div class="row h-100 g-3">
+                                <div class="col-12 col-xl-6">
+                                    <div class="section-header">Recent Users List</div>
+                                    <div class="table-wrapper">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped dash-table1 recent-user-table mb-0">
+                                                <thead class="table-header">
+                                                <tr class="table-head-title dash-head">
+                                                    <th>Name</th>
+                                                    <th>Email</th>
+                                                    <th>Date Created On</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="f-18 fw-medium">Staff Test</td>
+                                                        <td class="f-18">staff@one.com</td>
+                                                        <td class="f-18">April 21, 2026, 02:16 PM</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="f-18 fw-medium">agency</td>
+                                                        <td class="f-18">test@agencystaff.com</td>
+                                                        <td class="f-18">April 13, 2026, 11:19 PM</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="f-18 fw-medium">Test Client</td>
+                                                        <td class="f-18">client@one.com</td>
+                                                        <td class="f-18">March 30, 2026, 02:43 PM</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="f-18 fw-medium">Agency Two</td>
+                                                        <td class="f-18">agency@two.com</td>
+                                                        <td class="f-18">March 30, 2026, 02:07 AM</td>
+                                                    </tr>
+                                                     <tr>
+                                                        <td class="f-18 fw-medium">Agency</td>
+                                                        <td class="f-18">agency@one.com</td>
+                                                        <td class="f-18">March 30, 2026, 01:51 AM</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                    <div class="text-end mt-3">
+                                        <a class="btn btn-orange" href="https://sandbox.kangaroodev.co.uk/kuk_sites/admin/users/list">See All Users</a>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-xl-6">
+                                    <div class="section-header">Recent Resellers List</div>
+                                    <div class="table-wrapper">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped dash-table1 recent-user-table mb-0">
+                                                <thead class="table-header">
+                                                <tr class="table-head-title dash-head">
+                                                    <th>Name</th>
+                                                    <th>Email</th>
+                                                    <th>Date Created On</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                        <tr>
+                                                        <td class="f-18 fw-medium">Agency Two</td>
+                                                        <td class="f-18">agency@two.com</td>
+                                                        <td class="f-18">March 30, 2026, 02:07 AM</td>
+                                                    </tr>
+                                                        <tr>
+                                                        <td class="f-18 fw-medium">Agency</td>
+                                                        <td class="f-18">agency@one.com</td>
+                                                        <td class="f-18">March 30, 2026, 01:51 AM</td>
+                                                    </tr>
+                                                                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                    <div class="text-end mt-3">
+                                        <a class="btn btn-orange" href="https://sandbox.kangaroodev.co.uk/kuk_sites/admin/users/list">See All Resellers</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="sidebar-overlay overlay" id="sidebarOverlay"></div>
+
+    <!-- javascript  -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,826 @@
+/* New custom styles Start */
+main{
+    display: flex;
+    flex-direction: row;
+        transition: all .3s ease;
+}
+.top-header-wrapper{
+    background-color: #000;
+}
+.sidebar-main-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.action-dot-btn::after {
+    display: none;
+}
+    .box-item {
+    border: 1px solid #e4e4e6;
+    border-radius: 8px;
+    padding: 16px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+.box-item:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.box-icon-cont {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #f3f4f6;
+}
+.box-icon-cont.cont1{
+    color: #559df1;
+    background-color: #d9e9fc;
+}
+.box-icon-cont.cont2{
+    color: #8d5df5;
+    background-color: #f4effe;
+}
+.box-icon-cont.cont3{
+    color: #56c895;
+    background-color: #e0f5ec;
+}
+.box-icon svg {
+    width: 24px;
+    height: 24px;
+}
+.box-item h3 {
+    font-size: 13px;
+    color: #272b35;
+    margin: 0;
+    font-weight: 500;
+    line-height: 20px;
+}
+.box-item button {
+    padding: 4px 8px;
+    display: flex;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 14px;
+    border-radius: 4px;
+    align-items: center;
+    height: 18px;
+    border-width: 1px;
+    border-style: solid;
+    text-transform: uppercase;
+    padding-inline-end: 8px;
+    padding-inline-start: 8px;
+    color: #5d6068;
+    background-color: #5d60681a;
+}
+
+.preview-template-btn {
+    background-color: transparent;
+    color: black;
+    border: 2px solid #5d60681a;
+}
+
+/* New custom styles End */
+
+@media (min-width: 1440px) and (max-width:1730px) {
+    .table-head-title th {
+        padding:20px;
+        white-space: nowrap
+    }
+
+    .card-content.dash-card p {
+        font-size: 20px;
+        line-height: 28px
+    }
+
+    .card-stat {
+        padding: 28px 25px 23px;
+        max-height: -webkit-fill-available
+    }
+
+    .card-content.dash-card h3 {
+        font-size: 48px
+    }
+
+    .recent-user-table tbody tr td {
+        padding: 8px!important
+    }
+
+    .recent-user-table.table-striped>tbody>tr td {
+        padding-left: 20px!important
+    }
+
+    .main-title {
+        font-size: 48px;
+        padding-bottom: 0
+    }
+
+    tr.web-list-head th {
+        padding: 20px;
+        font-size: 21px;
+        white-space: nowrap
+    }
+
+    .img-card {
+        margin: 0;
+        width: 31%
+    }
+
+    .tem-content-page p:last-child {
+        width: 34%!important
+    }
+
+    .img-card-content {
+        padding: 20px 20px 30px!important
+    }
+
+    .img-card-top {
+        height: 160px
+    }
+
+    .template-card-box {
+        grid-template-columns: 1fr 1fr 1fr!important;
+        gap: 25px;
+        justify-content: space-between
+    }
+
+    .img-card-btns {
+        font-size: 15px!important;
+        padding: 7px 15px!important;
+        margin-top: 15px
+    }
+}
+
+@media (min-width: 1200px) and (max-width:1439px) {
+    .card-stat {
+        padding:20px 20px 23px!important;
+        max-height: -webkit-fill-available!important
+    }
+
+    .card-content.dash-card p {
+        font-size: 18px;
+        line-height: 26px
+    }
+
+    .table-head-title th {
+        padding: 12px;
+        font-size: 18px;
+        font-weight: 600
+    }
+
+    .recent-user-table tbody tr td {
+        padding: 10px!important;
+        font-size: 16px
+    }
+
+    .table-head-title th:last-child {
+        white-space: nowrap
+    }
+
+    .tem-content-page p:last-child {
+        width: 34%!important
+    }
+
+    .img-card-content {
+        padding: 20px 20px 30px!important
+    }
+
+    .img-card-top {
+        height: 160px
+    }
+
+    .template-card-box {
+        grid-template-columns: 1fr 1fr 1fr!important;
+        gap: 25px
+    }
+
+    .tem-content-page p {
+        font-size: 13px!important
+    }
+
+    .img-card-btns {
+        font-size: 14px!important;
+        padding: 7px 15px!important
+    }
+}
+
+@media (min-width: 1024px) and (max-width:1439px) {
+    .sidebar {
+        width:100%;
+        max-width: 245px
+    }
+
+    .nav-link {
+        font-size: 13px!important;
+        padding: 10px 20px!important;
+        line-height: 21px!important;
+        font-weight: 600!important
+    }
+
+    .nav-link:hover:after,.nav-link.active:after {
+        top: 58px
+    }
+
+    .main-title {
+        font-size: 42px
+    }
+
+    .side-nav-box {
+        padding-left: 30px
+    }
+
+    .card-stat {
+        padding: 28px 30px 23px;
+        max-height: 195px
+    }
+
+    .card-content.dash-card h3 {
+        font-size: 42px
+    }
+
+    .dash-card-img i {
+        font-size: 28px;
+        padding: 10px;
+        width: 52px
+    }
+
+    .avatar-card {
+        margin-top: 20px
+    }
+
+    .dashboard-content {
+        padding: 30px 40px 40px 30px
+    }
+
+    .template-card-box {
+        display: grid!important;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px
+    }
+
+    .template-card-box .img-card {
+        width: 100%;
+        margin: 0 0 0 7px
+    }
+
+    .img-card-content {
+        padding: 20px 30px 30px
+    }
+
+    .tem-content-page p:last-child {
+        width: 32%
+    }
+
+    .img-card-btns {
+        font-size: 15px
+    }
+
+    tr.web-list-head th {
+        padding: 15px 25px;
+        font-size: 18px;
+        min-width: 100px
+    }
+
+    tr.table-head-title.dash-head th {
+        font-size: 16px;
+        font-weight: 500;
+        padding: 8px 14px
+    }
+
+    .recent-user-table.table-striped>tbody>tr td {
+        padding-left: 20px!important
+    }
+
+    .recent-user-table tbody tr td {
+        padding: 10px!important;
+        font-size: 15px;
+        font-weight: 400
+    }
+
+    tr.web-list-head th:last-child {
+        min-width: 90px
+    }
+
+    tr.web-list-head th.min-150 {
+        min-width: 170px
+    }
+
+    .top-header {
+        padding: 30px
+    }
+
+    .kangaroo-logo {
+        margin-top: 80px
+    }
+
+    .signout-btn {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        padding: 10px 15px
+    }
+
+    .mt-2.mb-3.fw-bold {
+        font-size: 18px!important
+    }
+
+    .form-label {
+        font-size: 14px!important
+    }
+}
+
+@media (max-width: 1023px) {
+    .sidebar {
+        position:fixed!important;
+        z-index: 999;
+        height: 100vh;
+        max-width: 300px;
+        padding-top: 1rem;
+        display: none!important;
+        transition: transform .3s ease-in-out
+    }
+
+    .sidebar.collapsed {
+        display: flex!important;
+        transform: translate(0);
+        width: 100%
+    }
+
+    .close-sidebar {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        font-size: 32px;
+        font-weight: 500;
+        cursor: pointer
+    }
+
+    .sidebar-overlay.overlay {
+        position: fixed;
+        z-index: 998;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #00000080;
+        transition: opacity .3s ease;
+        opacity: 1
+    }
+
+    .sidebar-overlay.visible {
+        display: block;
+        opacity: 1
+    }
+
+    .sidebar-content {
+        padding-top: 25px
+    }
+
+    .kangaroo-logo {
+        width: 100%
+    }
+
+    .nav-link {
+        font-size: 18px;
+        padding: 15px 25px;
+        line-height: 30px
+    }
+
+    .side-nav-box {
+        padding-left: 26px
+    }
+
+    .top-header {
+        padding: 25px 30px;
+        border-radius: 0
+    }
+
+    .main-title {
+        font-size: 42px;
+        padding-bottom: 5px
+    }
+
+    .card-stat {
+        padding: 23px 26px 18px;
+        max-height: -moz-fit-content;
+        max-height: fit-content;
+        height: 100%
+    }
+
+    .card-content.dash-card h3 {
+        font-size: 42px
+    }
+
+    .nav-link:hover:after,.nav-link.active:after {
+        width: 40px;
+        height: 40px;
+        right: 0;
+        top: 60px
+    }
+
+    .dashboard-content {
+        padding: 30px 30px 40px;
+        height: calc(100vh - 100px)
+    }
+
+    tr.web-list-head th {
+        padding: 20px;
+        font-size: 20px;
+        white-space: nowrap
+    }
+
+    tr.web-list-head th.min-150 {
+        min-width: 170px
+    }
+
+    .recent-user-table.table-striped>tbody>tr td {
+        padding-left: 20px!important
+    }
+
+    .recent-user-table tbody tr td {
+        padding: 10px!important;
+        font-size: 15px
+    }
+
+    .avatar-card {
+        margin-top: 20px
+    }
+
+    .img-card {
+        width: 48%;
+        margin: 0
+    }
+
+    .template-card-box {
+        gap: 20px
+    }
+
+    .img-card-content {
+        padding: 20px 20px 30px
+    }
+
+    .tem-content-page p:last-child {
+        width: 32%
+    }
+
+    .btn-associated {
+        font-size: 16px
+    }
+     .sidebar .logo a,.sidebar.collapsed .signout-btn img {
+        display:none
+    }
+}
+@media (min-width: 1024px) {
+    div#sidebar:before {
+        content:"";
+        position: absolute;
+        top: 0;
+        right: -60px;
+        width: 60px;
+        height: 60px;
+        background-color: #000;
+        border-radius: 0
+    }
+
+    .nav.side-nav-box .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 18px
+    }
+
+    .nav.side-nav-box .nav-link i {
+        width: 22px;
+        margin-right: 0!important
+    }
+
+    .nav.side-nav-box .nav-link i:before {
+        width: 20px;
+        font-size: 17px
+    }
+
+    .nav.side-nav-box .nav-link img {
+        width: 40px
+    }
+
+    .side-nav-box {
+        padding-left: 10px;
+        gap: 5px;
+        margin-bottom: 20px
+    }
+
+    .nav-link {
+        color: #bfbfbf!important;
+        font-size: 17px;
+        padding: 12px 25px;
+        transition: none;
+        font-weight: 700;
+        line-height: 34px;
+        border-radius: 40px 0 0 40px
+    }
+
+    .sidebar .logo a,.sidebar.collapsed .logo img,.sidebar.collapsed .nav.side-nav-box .nav-link span,.signout-btn img {
+        display: none;
+        transition: width .3s ease
+    }
+
+    .sidebar.collapsed {
+        width: 60px;
+        overflow: hidden;
+        padding: 0
+    }
+
+    .sidebar.collapsed .sidebar-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center
+    }
+
+    .sidebar.collapsed .nav-link {
+        color: #bfbfbf!important;
+        font-size: 20px;
+        padding: 10px 15px;
+        font-weight: 600;
+        line-height: 30px;
+        border-radius: 16px 0 0 15px;
+        transition: width .4s ease
+    }
+
+    .sidebar.collapsed .side-nav-box {
+        padding-left: 0;
+        gap: 5px
+    }
+
+    .logo-text-col {
+        font-size: 48px;
+        color: #ee9124;
+        line-height: 60px;
+        transition: width .4s ease
+    }
+
+    .sidebar.collapsed .logo {
+        padding: 40px 0 50px
+    }
+
+    .sidebar.collapsed .nav-link:hover:after,.sidebar.collapsed .nav-link.active:after,.sidebar.collapsed .nav-link:hover:before,.sidebar.collapsed .nav-link.active:before {
+        display: none
+    }
+
+    .sidebar.collapsed .logo a {
+        display: block
+    }
+
+    .sidebar.collapsed .signout-btn img {
+        display: block;
+        width: 40px
+    }
+
+    .sidebar.collapsed .signout-btn span {
+        display: none
+    }
+
+    .sidebar.collapsed .signout-btn {
+        background-color: transparent
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    .remember-forgot {
+        margin-left:0!important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 0!important;
+        width: 100%
+    }
+
+    .remember-forgot a {
+        font-size: 18px;
+        padding: 12px 25px;
+        margin-right: 0
+    }
+
+    .login {
+        padding: 40px 30px
+    }
+
+    .register-link {
+        margin-left: 0rem!important
+    }
+
+    .login-input-box:last-child {
+        padding-top: 20px
+    }
+
+    .login-input input {
+        margin-top: 10px
+    }
+
+    .login-input .icon {
+        line-height: 75px
+    }
+
+    .register-link a,.register-link p {
+        font-size: 16px
+    }
+
+    .dashboard-content {
+        background: #fff;
+        padding: 20px
+    }
+
+    .main-title {
+        font-size: 38px;
+        padding-bottom: 0
+    }
+
+    .table-head-title th {
+        padding: 20px;
+        white-space: nowrap
+    }
+
+    .recent-user-table.table-striped>tbody>tr td {
+        padding-left: 20px!important;
+        font-size: 14px
+    }
+
+    .hamburger {
+        gap: 10px
+    }
+
+    .top-header {
+        padding: 20px;
+        border-radius: 0
+    }
+
+    tr.web-list-head th {
+        padding: 20px;
+        font-size: 18px;
+        white-space: nowrap
+    }
+
+    .recent-user-table tbody tr td {
+        padding: 10px!important
+    }
+
+    tr.web-list-head th.min-150 {
+        min-width: 135px
+    }
+
+    .pagination-wrapper {
+        margin: 2rem auto;
+        flex-wrap: wrap;
+        gap: 20px
+    }
+
+    .custom-pagination .page-link {
+        font-size: 14px
+    }
+
+    .pre-next .page-link {
+        padding: 6px 8px
+    }
+
+    .custom-pagination .pagination {
+        gap: 10px
+    }
+
+    .search-global {
+        flex-direction: column;
+        padding-bottom: 30px;
+        gap: 10px
+    }
+
+    .search-global .search-bar {
+        margin: 0;
+        width: 100%
+    }
+
+    .search-bar input {
+        max-width: 300px;
+        padding: 15px;
+        font-size: 16px;
+        width: 100%
+    }
+
+    .search-bar i {
+        right: 50px
+    }
+
+    .avatar-card {
+        margin-top: 30px
+    }
+
+    .manage-profile-sec {
+        padding-top: 10px;
+        padding-bottom: 40px
+    }
+
+    .password-change-con label,.name-profile label {
+        padding-top: 15px
+    }
+
+    .img-card {
+        width: 100%;
+        margin: 0
+    }
+
+    .img-card-content {
+        padding: 20px 30px 30px 20px
+    }
+
+    .template-card-box {
+        gap: 30px!important
+    }
+
+    .img-card-content h3 {
+        font-size: 24px
+    }
+
+    .tem-content-page p {
+        font-size: 13px
+    }
+
+    .img-card-btns {
+        padding: 7px 15px;
+        margin: 12px 0 0;
+        font-size: 16px
+    }
+
+    .hamburger h2 {
+        font-size: 20px
+    }
+
+    .btn-associated {
+        padding: 5px 10px;
+        font-size: 14px
+    }
+
+    .card-stat {
+        padding: 22px 25px;
+        margin-bottom: 15px;
+        max-height: -moz-max-content;
+        max-height: max-content;
+        height: 100%
+    }
+
+    .card-content.dash-card h3 {
+        font-size: 40px
+    }
+
+    .dash-card-img i {
+        font-size: 28px;
+        padding: 8px;
+        width: 54px
+    }
+
+    .see-users-btn {
+        padding: 8px 15px;
+        font-size: 16px
+    }
+
+    .section-header {
+        font-size: 22px;
+        margin-bottom: 18px
+    }
+
+    .total-search-txt {
+        padding-top: 10px!important
+    }
+
+    .custom-pagination .page-item.active .page-link {
+        padding: 8px 16px
+    }
+
+    .f-18 {
+        font-size: 16px
+    }
+
+    .img-card-top {
+        height: 150px
+    }
+
+    .signout-btn {
+        padding: 15px 20px;
+        font-size: 20px
+    }
+
+    tr.table-head-title.dash-head th {
+        font-size: 16px;
+        font-weight: 500
+    }
+
+    .profile-title {
+        font-size: 20px
+    }
+}
+
+    

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-EDITOR</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+        <script src="assets/js/web-editor-jquery.min.js"></script>
+
+</head>
+<body>
+    <main class="wrapper">
+        <div class="sidebar sidebar-main-box" id="sidebar">
+            <span class="close-sidebar d-lg-none txt-red">×</span>
+            <div class="sidebar-content">
+                <div class="logo">
+                <img src="assets/images/web-dash-white.png" alt="WEB-EDITOR" class="img-fluid">
+                </div>
+                <nav class="nav side-nav-box flex-column">
+                    <a class="nav-link active" href="index.html">
+                        <i class="fa-solid fa-gauge-high me-2"></i>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a class="nav-link" href="all-sites.html">
+                        <i class="fa-solid fa-globe me-2"></i>
+                        <span>All Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="pending-registrations.html">
+                        <i class="fa-solid fa-user-clock me-2"></i>
+                        <span>Pending Registrations</span>
+                    </a>
+
+                    <a class="nav-link" href="site-builder.html">
+                        <i class="fa-solid fa-layer-group me-2"></i>
+                        <span>Site Builder</span>
+                    </a>
+
+                    <a class="nav-link" href="all-users.html">
+                        <i class="fa-solid fa-users me-2"></i>
+                        <span>All Users</span>
+                    </a>
+
+                    <a class="nav-link" href="site-agency.html">
+                        <i class="fa-solid fa-building-user me-2"></i>
+                        <span>Agency Assigned Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="user-sites.html">
+                        <i class="fa-solid fa-user-check me-2"></i>
+                        <span>User Assigned Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="subscriptions.html">
+                        <i class="fa-solid fa-receipt me-2"></i>
+                        <span>Subscriptions</span>
+                    </a>
+
+                    <a class="nav-link" href="support.html">
+                        <i class="fa-solid fa-headset me-2"></i>
+                        <span>Support</span>
+                    </a> 
+                    <a class="nav-link" href="settings.html">
+                        <i class="fa-solid fa-gear me-2"></i>
+                        <span>Settings</span>
+                    </a>
+
+                    <a class="nav-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640" fill="white">
+                          <path d="M160 96C142.3 96 128 110.3 128 128C128 145.7 142.3 160 160 160L288 160L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 160L480 160C497.7 160 512 145.7 512 128C512 110.3 497.7 96 480 96L160 96z"></path>
+                        </svg>
+                        <span>Toolbox</span>
+                    </a>
+
+                </nav>
+            </div>
+            <form method="POST">
+                <input type="hidden" name="_token"  autocomplete="off">  
+                <button type="submit" class="signout-btn"><span>Sign out</span>
+                    <i class="fa-solid fa-right-from-bracket ms-2"></i>
+                </button>
+            </form>
+        </div>
+
+         <!-- Main Content -->
+        <div class="main-content">
+      
+            <!-- Top Header -->
+            <div class="top-header-wrapper">
+                <div class="top-header d-flex justify-content-between align-items-center ">
+                <div class="hamburger d-flex align-items-center" id="toggleSidebar">
+                    <img src="assets/images/humburger.png" class="img-fluid" alt="">
+                    <h2>Settings</h2>
+                </div>
+
+                <!-- User Profile Section -->
+                <div class="profile-box d-flex align-items-center">
+                    <div class="text-end me-3">
+                        <h5 class="profile-title">Super Admin</h5>
+                        <p class="profile-role text-muted">Super Admin</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Main Dashboard Content -->
+            <div class="dashboard-content w-100">
+                <div class="content-box-details">
+                    <div class="search-global user-search d-flex justify-content-between align-items-end gap-3 flex-wrap mb-3">
+                        <div class="d-flex align-items-center gap-2 flex-wrap">
+                            <div>
+                                <label for="status-filter" class="form-label mb-0 me-2">Status</label>
+                                <select id="status-filter" class="form-select form-select-sm" style="min-width: 180px;">
+                                    <option value="pending" selected>Pending</option>
+                                    <option value="rejected">Rejected</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive ">
+                        <table class="table table-striped recent-user-table create-table web-list-table align-middle">
+                            <thead>
+                                <tr class="web-list-head create-user-head">
+                                    <th class="bg-orange min-150">S.no</th>
+                                    <th class="bg-orange min-150">Name</th>
+                                    <th class="bg-orange min-150">Agency Name</th>
+                                    <th class="bg-orange min-150">Email</th>
+                                    <th class="bg-orange min-150">Address</th>
+                                    <th class="bg-orange min-150">Phone</th>
+                                    <th class="bg-orange">Website</th>
+                                    <th class="bg-orange">Status</th>
+                                    <th class="bg-orange min-150">Created At</th>
+                                    <th class="bg-orange">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Ella Day</td>
+                                    <td>Barbara Pacheco</td>
+                                    <td>kixajixun@mailinator.com</td>
+                                    <td>Expedita rerum magni</td>
+                                    <td>+1 (656) 608-6691</td>
+                                    <td>
+                                        <a href="https://www.tyv.com" target="_blank" rel="noopener">https://www.tyv.com</a>
+                                    </td>
+                                    <td>
+                                        <span class=" btn btn-success btn-sm cursor-default">
+                                                    Pending
+                                                </span>
+                                    </td>
+                                    <td>2026-04-13 19:01</td>
+                                    <td>
+                                        <form method="POST" action="https://sandbox.kangaroodev.co.uk/kuk_sites/admin/pending-registrations/1/approve" onsubmit="return confirm('Approve this registration?');">
+                                            <input type="hidden" name="_token" value="AKJb9ZghqqKUpuHRitHgmTFtQerfEuQwjht8x6ml" autocomplete="off">
+                                            <button type="submit" class="btn btn-success btn-sm">Approve</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="sidebar-overlay overlay" id="sidebarOverlay"></div>
+
+    <!-- javascript  -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
