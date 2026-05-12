@@ -52,7 +52,7 @@
                         <span>Agency Assigned Sites</span>
                     </a>
 
-                    <a class="nav-link" href="user-sites.html">
+                    <a class="nav-link" href="site-user.html">
                         <i class="fa-solid fa-user-check me-2"></i>
                         <span>User Assigned Sites</span>
                     </a>
@@ -66,7 +66,7 @@
                         <i class="fa-solid fa-headset me-2"></i>
                         <span>Support</span>
                     </a> 
-                    <a class="nav-link" href="settings.html">
+                    <a class="nav-link" href="setting.html">
                         <i class="fa-solid fa-gear me-2"></i>
                         <span>Settings</span>
                     </a>
@@ -111,67 +111,155 @@
 
             <!-- Main Dashboard Content -->
             <div class="dashboard-content w-100">
-                <div class="content-box-details">
-                    <div class="search-global user-search d-flex justify-content-between align-items-end gap-3 flex-wrap mb-3">
-                        <div class="d-flex align-items-center gap-2 flex-wrap">
-                            <div>
-                                <label for="status-filter" class="form-label mb-0 me-2">Status</label>
-                                <select id="status-filter" class="form-select form-select-sm" style="min-width: 180px;">
-                                    <option value="pending" selected>Pending</option>
-                                    <option value="rejected">Rejected</option>
-                                </select>
+                <section class="manage-profile-sec">
+                    <!-- Flash Messages -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 m-2">
+                            <div class="profile-card card card-body">
+                                <!-- Profile Update -->
+                                <h5 class="mb-3">Update Profile</h5>
+                                <hr>
+                                <form action="" method="POST" enctype="multipart/form-data">
+                                    <input type="hidden" name="_token" value="9kL1l9My4O67fD9kMjoNa8lSTgW1quEyO9JeGfex" autocomplete="off">
+                                    <input type="hidden" name="_method" value="PUT">
+                                    <div class="row mb-3">
+                                        <!-- Name -->
+                                        <div class="col-md-6 col-xl-4">
+                                            <label class="form-label">Name <i class="fa fa-info-circle text-dark" title="Your display name shown across the application."></i></label>
+                                            <input type="text" name="name" class="form-control box-radius-50 " value="Super Admin" required>
+                                        </div>
+
+                                        <!-- Email -->
+                                        <div class="col-md-6 col-xl-4">
+                                            <label class="form-label">Email <i class="fa fa-info-circle text-dark" title="Used to sign in and receive notifications. Changing it will require re-verification."></i></label>
+                                            <div class="input-group">
+                                                <input type="email" name="email" class="form-control box-radius-50 " value="jaweed@kangaroouk.com" required>
+                                            </div>
+                                        </div>
+
+                                        <!-- Profile Photo -->
+                                        <div class="col-md-6 col-xl-4">
+                                            <label class="form-label">Profile Photo <i class="fa fa-info-circle text-dark" title="Upload a square image for best results. Max 2MB."></i></label>
+                                            <input type="file" id="profile_photo" name="profile_photo" class="form-control box-radius-50 " accept="image/*">
+                                            <div class="mt-2" id="image-preview-container" style="display:none;">
+                                                <img id="image-preview" src="#" alt="Preview" class="img-fluid rounded" style="max-height: 150px;">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-5 pt-3 mb-4">
+                                        <h5 class="mb-3">Super Admin Branding</h5>
+                                        <hr>
+                                        <div id="branding-list" class="row">
+                                            <div class="col-md-6 col-xl-4">
+                                                <label class="form-label">Admin Logo <i class="fa fa-info-circle text-dark" title="Logo shown in the sidebar and header for Super Admin. Max 4MB."></i></label>
+                                                <input type="file" name="admin_logo" class="form-control box-radius-50 " accept="image/*">
+                                            </div>
+                                            <div class="col-md-6 col-xl-4 pt-3">
+                                                <label class="form-label pt-3">Primary Color (Sidebar) <i class="fa fa-info-circle text-dark" title="Sets the sidebar background color."></i></label>
+                                                <input type="color" name="primary_color" class="form-control form-control-color box-radius-50 " value="#000000">
+                                            </div>
+                                            <div class="col-md-6 col-xl-4 pt-3">
+                                                <label class="form-label pt-3">Secondary Color (Main Background) <i class="fa fa-info-circle text-dark" title="Sets the main content background color."></i></label>
+                                                <input type="color" name="secondary_color" class="form-control form-control-color box-radius-50 " value="#ffffff">
+                                            </div>
+                                            <div class="col-md-6 col-xl-4 pt-3">
+                                                <label class="form-label pt-3">Accent Color (Buttons) <i class="fa fa-info-circle text-dark" title="Used for buttons and highlights."></i></label>
+                                                <input type="color" name="accent_color" class="form-control form-control-color box-radius-50 " value="#f89421">
+                                            </div>
+
+                                            <div class="col-md-6 col-xl-4 pt-3">
+                                                <label class="form-label pt-3">Navigation Text Color <i class="fa fa-info-circle text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="This is the color of the text on the navigation bar."></i></label>
+                                                <input type="color" name="nav_text_color" class="form-control form-control-color box-radius-50 " value="#ffffff">
+                                            </div>
+                                            <div class="col-md-6 col-xl-4 pt-3">
+                                                <label class="form-label pt-3">Navigation Text (Selected / Hovered) <i class="fa fa-info-circle text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="This is the color used for selected and hovered navigation links."></i></label>
+                                                <input type="color" name="nav_text_hover_color" class="form-control form-control-color box-radius-50 " value="#000000">
+                                            </div>
+
+                                            <div class="col-md-12 mt-4">
+                                                <label class="form-label">Support Ticket Notification Emails <i class="fa fa-info-circle text-dark" title="Comma separated list of up to 5 email addresses that will receive new support ticket notifications."></i></label>
+                                                <textarea name="support_ticket_notification_emails" class="form-control " rows="2" placeholder="alice@example.com, bob@example.com">jaweed@kangaroouk.com</textarea>
+                                                <div class="form-text">Enter up to 5 valid email addresses separated by commas. Invalid or duplicate emails will be ignored.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <button type="submit" class="btn btn-main" >Update Profile</button>
+                                </form>
+
+                                <!-- Password Change -->
+                                <div class="password-change-con mt-5">
+                                    <h5 class="mb-3">Change Password</h5>
+                                    <hr>
+                                    <form action="#" method="POST">
+                                        <input type="hidden" name="_token" value="9kL1l9My4O67fD9kMjoNa8lSTgW1quEyO9JeGfex" autocomplete="off">
+                                        <input type="hidden" name="_method" value="PUT">
+                                        <div class="row mb-3">
+                                            <div class="col-md-6 col-xl-4">
+                                                <label class="form-label">Current Password <i class="fa fa-info-circle text-dark" title="We use this to verify it&#039;s really you."></i></label>
+                                                <div class="input-group">
+                                                    <input type="password" name="current_password" class="showPassword form-control box-radius-50 " required>
+                                                    <button type="button" class="btn-show password-toggle">SHOW</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-xl-4">
+                                                <label class="form-label">New Password <i class="fa fa-info-circle text-dark" title="Choose a strong new password (min 8 characters)."></i></label>
+                                                <div class="input-group">
+                                                    <input type="password" name="password" class="showPassword form-control box-radius-50 " required>
+                                                    <button type="button" class="btn-show password-toggle">SHOW</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-xl-4">
+                                                <label class="form-label">Confirm Password <i class="fa fa-info-circle text-dark" title="Re-enter the new password to confirm."></i></label>
+                                                <div class="input-group">
+                                                    <input type="password" name="password_confirmation" class="showPassword form-control box-radius-50 " required>
+                                                    <button type="button" class="btn-show password-toggle">SHOW</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-main" >Change Password</button>
+                                    </form>
+                                </div>
+
+                                <div class="password-change-con mt-5">
+                                    <h5 class="mb-3">Admin Notices</h5>
+                                    <hr>
+
+                                    <form action="" method="POST">
+                                        <input type="hidden" name="_token" value="9kL1l9My4O67fD9kMjoNa8lSTgW1quEyO9JeGfex" autocomplete="off">
+                                        <div class="row mb-3 align-items-start">
+
+                                            <div class="col-md-4">
+                                                <label class="form-label d-block mb-3">Enable to display the notice immediately on Application</label>
+                                                <div class="form-check form-switch d-flex align-items-center gap-2 mb-0">
+                                                    <input class="form-check-input mt-0" type="checkbox" role="switch" id="admin_notice_active" name="admin_notice_active" value="1">
+                                                    <label class="form-check-label" for="admin_notice_active">
+                                                        Active
+                                                        <i class="fa fa-info-circle text-dark ms-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Toggle to show or hide the notice banner across the application."></i>
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-main" >
+                                                    Save Notice Settings
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
-
-                    <div class="table-responsive ">
-                        <table class="table table-striped recent-user-table create-table web-list-table align-middle">
-                            <thead>
-                                <tr class="web-list-head create-user-head">
-                                    <th class="bg-orange min-150">S.no</th>
-                                    <th class="bg-orange min-150">Name</th>
-                                    <th class="bg-orange min-150">Agency Name</th>
-                                    <th class="bg-orange min-150">Email</th>
-                                    <th class="bg-orange min-150">Address</th>
-                                    <th class="bg-orange min-150">Phone</th>
-                                    <th class="bg-orange">Website</th>
-                                    <th class="bg-orange">Status</th>
-                                    <th class="bg-orange min-150">Created At</th>
-                                    <th class="bg-orange">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Ella Day</td>
-                                    <td>Barbara Pacheco</td>
-                                    <td>kixajixun@mailinator.com</td>
-                                    <td>Expedita rerum magni</td>
-                                    <td>+1 (656) 608-6691</td>
-                                    <td>
-                                        <a href="https://www.tyv.com" target="_blank" rel="noopener">https://www.tyv.com</a>
-                                    </td>
-                                    <td>
-                                        <span class=" btn btn-success btn-sm cursor-default">
-                                                    Pending
-                                                </span>
-                                    </td>
-                                    <td>2026-04-13 19:01</td>
-                                    <td>
-                                        <form method="POST" action="https://sandbox.kangaroodev.co.uk/kuk_sites/admin/pending-registrations/1/approve" onsubmit="return confirm('Approve this registration?');">
-                                            <input type="hidden" name="_token" value="AKJb9ZghqqKUpuHRitHgmTFtQerfEuQwjht8x6ml" autocomplete="off">
-                                            <button type="submit" class="btn btn-success btn-sm">Approve</button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div>
-
-                    </div>
-                </div>
+                </section>
             </div>
 
         </div>

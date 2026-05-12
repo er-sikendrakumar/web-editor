@@ -52,7 +52,7 @@
                         <span>Agency Assigned Sites</span>
                     </a>
 
-                    <a class="nav-link" href="user-sites.html">
+                    <a class="nav-link" href="site-user.html">
                         <i class="fa-solid fa-user-check me-2"></i>
                         <span>User Assigned Sites</span>
                     </a>
@@ -66,7 +66,7 @@
                         <i class="fa-solid fa-headset me-2"></i>
                         <span>Support</span>
                     </a> 
-                    <a class="nav-link" href="settings.html">
+                    <a class="nav-link" href="setting.html">
                         <i class="fa-solid fa-gear me-2"></i>
                         <span>Settings</span>
                     </a>
@@ -110,67 +110,39 @@
             </div>
 
             <!-- Main Dashboard Content -->
-            <div class="dashboard-content w-100">
-                <div class="content-box-details">
-                    <div class="search-global user-search d-flex justify-content-between align-items-end gap-3 flex-wrap mb-3">
-                        <div class="d-flex align-items-center gap-2 flex-wrap">
-                            <div>
-                                <label for="status-filter" class="form-label mb-0 me-2">Status</label>
-                                <select id="status-filter" class="form-select form-select-sm" style="min-width: 180px;">
-                                    <option value="pending" selected>Pending</option>
-                                    <option value="rejected">Rejected</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+            <div class="dashboard-content">
+                <div class="">
 
+                    <form method="get" class="search-global user-search d-flex justify-content-between align-items-center">
+                        <div class="search-bar position-relative d-flex align-items-center gap-2">
+                            <input type="text" name="search" value="" placeholder="Domain, site name or user name/email">
+                            <i class="fa-solid fa-magnifying-glass position-absolute websitelist-theme-color"></i>
+                        </div>
+                    </form>
+                     
                     <div class="table-responsive ">
-                        <table class="table table-striped recent-user-table create-table web-list-table align-middle">
+                        <table class="table recent-user-table create-table web-list-table align-middle">
                             <thead>
-                                <tr class="web-list-head create-user-head">
-                                    <th class="bg-orange min-150">S.no</th>
-                                    <th class="bg-orange min-150">Name</th>
-                                    <th class="bg-orange min-150">Agency Name</th>
-                                    <th class="bg-orange min-150">Email</th>
-                                    <th class="bg-orange min-150">Address</th>
-                                    <th class="bg-orange min-150">Phone</th>
-                                    <th class="bg-orange">Website</th>
-                                    <th class="bg-orange">Status</th>
-                                    <th class="bg-orange min-150">Created At</th>
-                                    <th class="bg-orange">Actions</th>
-                                </tr>
+                            <tr class="web-list-head create-user-head">
+                                <th class="bg-orange min-150">S.no</th>
+                                <th class="bg-orange min-150">User</th>
+                                <th class="bg-orange min-150">Email</th>
+                                <th class="bg-orange min-150">No of Sites Associated</th>
+                                <th class="bg-orange">Actions</th>
+                            </tr>
                             </thead>
                             <tbody>
+
                                 <tr>
-                                    <td>1</td>
-                                    <td>Ella Day</td>
-                                    <td>Barbara Pacheco</td>
-                                    <td>kixajixun@mailinator.com</td>
-                                    <td>Expedita rerum magni</td>
-                                    <td>+1 (656) 608-6691</td>
-                                    <td>
-                                        <a href="https://www.tyv.com" target="_blank" rel="noopener">https://www.tyv.com</a>
-                                    </td>
-                                    <td>
-                                        <span class=" btn btn-success btn-sm cursor-default">
-                                                    Pending
-                                                </span>
-                                    </td>
-                                    <td>2026-04-13 19:01</td>
-                                    <td>
-                                        <form method="POST" action="https://sandbox.kangaroodev.co.uk/kuk_sites/admin/pending-registrations/1/approve" onsubmit="return confirm('Approve this registration?');">
-                                            <input type="hidden" name="_token" value="AKJb9ZghqqKUpuHRitHgmTFtQerfEuQwjht8x6ml" autocomplete="off">
-                                            <button type="submit" class="btn btn-success btn-sm">Approve</button>
-                                        </form>
-                                    </td>
+                                    <td colspan="6" class="p-4 text-center text-gray-500">No Users found.</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-
-                    <div>
-
-                    </div>
+                    <!-- Pagination -->
+                    <nav class="custom-pagination float-end">
+                    
+                    </nav>
                 </div>
             </div>
 

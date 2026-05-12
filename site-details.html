@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-EDITOR</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+        <script src="assets/js/web-editor-jquery.min.js"></script>
+
+</head>
+<body>
+    <main class="wrapper">
+        <div class="sidebar sidebar-main-box" id="sidebar">
+            <span class="close-sidebar d-lg-none txt-red">×</span>
+            <div class="sidebar-content">
+                <div class="logo">
+                <img src="assets/images/web-dash-white.png" alt="WEB-EDITOR" class="img-fluid">
+                </div>
+                <nav class="nav side-nav-box flex-column">
+                    <a class="nav-link active" href="index.html">
+                        <i class="fa-solid fa-gauge-high me-2"></i>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a class="nav-link" href="all-sites.html">
+                        <i class="fa-solid fa-globe me-2"></i>
+                        <span>All Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="pending-registrations.html">
+                        <i class="fa-solid fa-user-clock me-2"></i>
+                        <span>Pending Registrations</span>
+                    </a>
+
+                    <a class="nav-link" href="site-builder.html">
+                        <i class="fa-solid fa-layer-group me-2"></i>
+                        <span>Site Builder</span>
+                    </a>
+
+                    <a class="nav-link" href="all-users.html">
+                        <i class="fa-solid fa-users me-2"></i>
+                        <span>All Users</span>
+                    </a>
+
+                    <a class="nav-link" href="site-agency.html">
+                        <i class="fa-solid fa-building-user me-2"></i>
+                        <span>Agency Assigned Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="site-user.html">
+                        <i class="fa-solid fa-user-check me-2"></i>
+                        <span>User Assigned Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="subscriptions.html">
+                        <i class="fa-solid fa-receipt me-2"></i>
+                        <span>Subscriptions</span>
+                    </a>
+
+                    <a class="nav-link" href="support.html">
+                        <i class="fa-solid fa-headset me-2"></i>
+                        <span>Support</span>
+                    </a> 
+                    <a class="nav-link" href="setting.html">
+                        <i class="fa-solid fa-gear me-2"></i>
+                        <span>Settings</span>
+                    </a>
+
+                    <a class="nav-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640" fill="white">
+                          <path d="M160 96C142.3 96 128 110.3 128 128C128 145.7 142.3 160 160 160L288 160L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 160L480 160C497.7 160 512 145.7 512 128C512 110.3 497.7 96 480 96L160 96z"></path>
+                        </svg>
+                        <span>Toolbox</span>
+                    </a>
+
+                </nav>
+            </div>
+            <form method="POST">
+                <input type="hidden" name="_token"  autocomplete="off">  
+                <button type="submit" class="signout-btn"><span>Sign out</span>
+                    <i class="fa-solid fa-right-from-bracket ms-2"></i>
+                </button>
+            </form>
+        </div>
+
+         <!-- Main Content -->
+        <div class="main-content">
+      
+            <!-- Top Header -->
+            <div class="top-header-wrapper">
+                <div class="top-header d-flex justify-content-between align-items-center ">
+                <div class="hamburger d-flex align-items-center" id="toggleSidebar">
+                    <img src="assets/images/humburger.png" class="img-fluid" alt="">
+                    <h2>Website List > Site Details</h2>
+                </div>
+
+                <!-- User Profile Section -->
+                <div class="profile-box d-flex align-items-center">
+                    <div class="text-end me-3">
+                        <h5 class="profile-title">Super Admin</h5>
+                        <p class="profile-role text-muted">Super Admin</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Main Dashboard Content -->
+            <div class="dashboard-content" style="background: #f7f8fa !important;">
+                <div class="overview-container">
+                    <!-- Site Overview Section -->
+                    <div class="site-main-section mb-4">
+                        <div class="mb-4">
+                            <h2 class="fw-semibold d-flex align-items-start gap-1 fs-2">Site Overview</h2>
+                        </div>
+
+                        <div class="overview-card p-3 mb-4 ">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <a href="#" id="openPreviewModal" title="View Thumbnail">
+                                        <img src="https://irp.cdn-website.com/f25dcb0c/screenshots/Screenshot.png?v=1777382049000&amp;updated=true" alt="Site Thumbnail" class="site-img me-3">
+                                    </a>
+
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="right-main">
+                                        <div class="d-flex flex-wrap align-items-start">
+                                            <div class="flex-grow-1">
+                                                <div class="d-flex align-items-center mb-1">
+                                                    <span class="fw-semibold f-20 txt-dark-grey">http://www.prudhommeinternational.com/</span>
+                                                    <span class="site-id ms-2 fs-14">· Site ID: f25dcb0c</span>
+                                                </div>
+                                                <a href="#/" class="site-link d-inline-block fs-14 text-secondary" target="_blank">http://www.prudhommeinternational.com/</a>
+                                                <div class="d-flex align-items-start flex-column gap-3 mt-2">
+                                                    <span class="btn btn-main line-height-14"> Editor 2.0</span>
+                                                    <div class="d-flex align-items-center mb-2 mt-2">
+                                                        <span class="badge badge-success badge-published me-2">PUBLISHED</span>
+                                                        <span class="ms-1 text-secondary fs-14">· 17 Apr 2026, 08:22</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mb-2 mt-2">
+                                                        <span class="ms-1 text-secondary fs-14">Last Modified:  28 Apr 2026, 13:13</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="ms-auto d-none d-md-block">
+                                                <button type="button" class="btn btn-link text-secondary fs-4 p-0 text-decoration-none btn-hover-none">&#8230;</button>
+                                            </div>
+                                        </div>
+                                        <hr class="my-3">
+                                        <div class="edit-create-box d-flex justify-content-between flex-wrap">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="btn btn-main p-7" title="Edit Site" data-site-name="f25dcb0c" data-lang="en-gb" >Edit Site</button>
+
+                                                <button class="btn btn-outline-secondary border-outline px-4 py-2 fw-medium d-flex align-items-center radius-30" onclick="window.open('https://preview.web-editor.ai/preview/f25dcb0c?t=1777382423246','_blank')">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" class="me-1" viewBox="0 0 16 16">
+                                                        <circle cx="8" cy="8" r="7" stroke="#222" stroke-width="1" fill="none" />
+                                                        <path d="M6 5 L11 8 L6 11 Z" fill="#222" />
+                                                    </svg>
+                                                    Preview
+                                                </button>
+
+
+                                                <button class="btn btn-outline-secondary border-outline px-4 py-2 fw-medium d-flex align-items-center radius-30" type="button" onclick="document.getElementById('duplicateRouteLink-842').click()">
+                                                    Duplicate
+                                                </button>
+                                                <a href="#" id="duplicateRouteLink-842" class="d-none"></a>
+
+
+                                                <button type="button" class="btn btn-outline-danger js-unpublish radius-30 border border-danger" title="Unpublish" data-site-id="842" data-site-name="f25dcb0c">Unpublish</button>
+
+                                            </div>
+                                            <div class="d-flex justify-content-end align-items-center">
+                                                <span class="text-secondary fs-6">Creation Date</span>
+                                                <span class="mx-2 text-secondary">·</span>
+                                                <span class="fw-medium fs-6 text-secondary">17 Apr 2026, 08:22</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Form Responses Card -->
+                    <div class="form-card mb-4">
+                        <div class="form-header d-flex align-items-center justify-content-between flex-wrap">
+                            <div>
+                                <span class="fw-semibold">Form Responses</span>
+                                <span class="text-secondary ms-2 fs-6">· 1 Responses</span>
+                            </div>
+                            <a class="btn-outline d-flex align-items-center fs-14 radius-50" href="https://sandbox.kangaroodev.co.uk/kuk_sites/admin/sites/duda/842/forms/export">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#2563eb" class="bi bi-download me-1" viewBox="0 0 16 16">
+                                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.6a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.6a.5.5 0 0 1 1 0v2.6A2 2 0 0 1 14 15H2a2 2 0 0 1-2-2v-2.6a.5.5 0 0 1 .5-.5z" />
+                                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                </svg>
+                                Export to CSV
+                            </a>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table form-table site-details-form-table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th style="width:40%;">Submission date</th>
+                                        <th>Email</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="formTbody">
+                                    <tr>
+                                        <td>01 May, 2026</td>
+                                        <td>josh@kangaroouk.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <nav aria-label="Form responses pagination" id="formPaginationNav" class="d-flex justify-content-center mt-3" style="display:none;">
+                            <ul id="formPagination" class="pagination pagination-rounded mb-0">
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- User Access & Permissions Section -->
+                    <div class="form-card mb-4">
+                        <div class="form-header d-flex align-items-center justify-content-between flex-wrap">
+                            <div>
+                                <span class="fw-semibold">User Access & Permissions</span>
+                                <span class="text-secondary ms-2 fs-6">· Manage who can access this site</span>
+                            </div>
+                            <a href="https://sandbox.kangaroodev.co.uk/kuk_sites/admin/sites/duda/842/users/create" class="btn btn-outline-primary btn-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle me-1" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                </svg>
+                                Add User
+                            </a>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table form-table site-details-form-table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th style="width:30%;">User</th>
+                                        <th style="width:25%;">Email</th>
+                                        <th style="width:30%;">Permissions</th>
+                                        <th style="width:15%;">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="usersTbody">
+                                    <tr>
+                                        <td colspan="4" class="text-center text-muted">No users assigned yet.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <nav aria-label="Users pagination" id="usersPaginationNav" class="d-flex justify-content-center mt-3" style="display:none;">
+                            <ul id="usersPagination" class="pagination pagination-rounded mb-0">
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Activity Log Section -->
+                    <div class="activity-log-box bg-white p-3 rounded-3 shadow-sm">
+                        <div class="mt-4 mb-2 d-flex align-items-center justify-content-between">
+                            <h4 class="fs-5 fw-medium ps-3">Activity Log</h4>
+                            <div>
+                                <select class="form-select form-select-sm dropdown-activity" style="display:inline-block;">
+                                    <option value="" selected>All events</option>
+                                    <option value="site_published">Site published</option>
+                                    <option value="site_backup_created">Backup created</option>
+                                    <option value="newsletter_registration">Newsletter Registration</option>
+                                    <option value="user_login">User Login</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-activity site-details-form-table align-middle mb-0">
+                                <thead class="table-success">
+                                <tr>
+                                    <th style="width:22%;">Event</th>
+                                    <th style="width:18%;">User <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#bfc7d1" class="bi bi-info-circle ms-1" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path><path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 .877-.252 1.02-.598l.088-.416c.073-.34.211-.466.465-.466.276 0 .375.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 .877-.252 1.02-.598l.088-.416c.073-.34.211-.466.465-.466.276 0 .375.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 .877-.252 1.02-.598l.088-.416c.073-.34.211-.466.465-.466.276 0 .375.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 .877-.252 1.02-.598l.088-.416c.073-.34.211-.466.465-.466z"></path></svg></th>
+                                    <th style="width:28%;">Email</th>
+                                    <th style="width:22%;">Date &amp; Time</th>
+                                </tr>
+                                </thead>
+                                <tbody id="activityTbody">
+                                    <tr data-activity="site_published">
+                                        <td>Site published</td>
+                                        <td>Halosports</td>
+                                        <td>halosports@hotmail.co.uk</td>
+                                        <td>01 May, 2026 · 15:17</td>
+                                    </tr>
+                                    <tr data-activity="site_backup_created">
+                                        <td>Backup created</td>
+                                        <td>Halosports</td>
+                                        <td>halosports@hotmail.co.uk</td>
+                                        <td>01 May, 2026 · 15:17</td>
+                                    </tr>
+                                    <tr data-activity="site_published">
+                                        <td>Site published</td>
+                                        <td>Josh</td>
+                                        <td>josh@kangaroouk.com</td>
+                                        <td>29 Apr, 2026 · 12:02</td>
+                                    </tr>
+                                    <tr data-activity="site_backup_created">
+                                        <td>Backup created</td>
+                                        <td>Josh</td>
+                                        <td>josh@kangaroouk.com</td>
+                                        <td>29 Apr, 2026 · 12:02</td>
+                                    </tr>
+                                    <tr data-activity="site_published">
+                                        <td>Site published</td>
+                                        <td>Josh</td>
+                                        <td>josh@kangaroouk.com</td>
+                                        <td>29 Apr, 2026 · 12:02</td>
+                                    </tr>
+                                    <tr data-activity="site_backup_created">
+                                        <td>Backup created</td>
+                                        <td>Josh</td>
+                                        <td>josh@kangaroouk.com</td>
+                                        <td>29 Apr, 2026 · 12:02</td>
+                                    </tr>
+                                    <tr data-activity="site_published">
+                                        <td>Site published</td>
+                                        <td>Josh</td>
+                                        <td>josh@kangaroouk.com</td>
+                                        <td>29 Apr, 2026 · 12:01</td>
+                                    </tr>
+                                    <tr data-activity="site_backup_created">
+                                        <td>Backup created</td>
+                                        <td>Josh</td>
+                                        <td>josh@kangaroouk.com</td>
+                                        <td>29 Apr, 2026 · 12:01</td>
+                                    </tr>
+                                    <tr data-activity="site_published">
+                                        <td>Site published</td>
+                                        <td>Josh</td>
+                                        <td>josh@kangaroouk.com</td>
+                                        <td>29 Apr, 2026 · 09:01</td>
+                                    </tr>                                                                                                                                                                                                                                                                                                                                              
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Activity Log Pagination -->
+                        <nav aria-label="Activity pagination" id="activityPaginationNav" class="d-flex justify-content-center mt-3">
+                            <ul id="activityPagination" class="pagination pagination-rounded mb-0">
+                                <li class="page-item disabled"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="sidebar-overlay overlay" id="sidebarOverlay"></div>
+   
+    <!-- javascript  -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
