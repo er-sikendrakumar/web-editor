@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-EDITOR</title>
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+        <script src="../assets/js/web-editor-jquery.min.js"></script>
+
+</head>
+<body>
+    <main class="wrapper">
+        <div class="sidebar sidebar-main-box" id="sidebar">
+            <span class="close-sidebar d-lg-none txt-red">×</span>
+            <div class="sidebar-content">
+                <div class="logo">
+                <img src="../assets/images/web-dash-white.png" alt="WEB-EDITOR" class="img-fluid">
+                </div>
+                <nav class="nav side-nav-box flex-column">
+                    <a class="nav-link active" href="index.html">
+                        <i class="fa-solid fa-gauge-high me-2"></i>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a class="nav-link" href="all-sites.html">
+                        <i class="fa-solid fa-globe me-2"></i>
+                        <span>All Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="pending-registrations.html">
+                        <i class="fa-solid fa-user-clock me-2"></i>
+                        <span>Pending Registrations</span>
+                    </a>
+
+                    <a class="nav-link" href="site-builder.html">
+                        <i class="fa-solid fa-layer-group me-2"></i>
+                        <span>Site Builder</span>
+                    </a>
+
+                    <a class="nav-link" href="all-users.html">
+                        <i class="fa-solid fa-users me-2"></i>
+                        <span>All Users</span>
+                    </a>
+
+                    <a class="nav-link" href="site-agency.html">
+                        <i class="fa-solid fa-building-user me-2"></i>
+                        <span>Agency Assigned Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="site-user.html">
+                        <i class="fa-solid fa-user-check me-2"></i>
+                        <span>User Assigned Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="subscriptions.html">
+                        <i class="fa-solid fa-receipt me-2"></i>
+                        <span>Subscriptions</span>
+                    </a>
+
+                    <a class="nav-link" href="support.html">
+                        <i class="fa-solid fa-headset me-2"></i>
+                        <span>Support</span>
+                    </a> 
+                    <a class="nav-link" href="setting.html">
+                        <i class="fa-solid fa-gear me-2"></i>
+                        <span>Settings</span>
+                    </a>
+
+                    <a class="nav-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640" fill="white">
+                          <path d="M160 96C142.3 96 128 110.3 128 128C128 145.7 142.3 160 160 160L288 160L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 160L480 160C497.7 160 512 145.7 512 128C512 110.3 497.7 96 480 96L160 96z"></path>
+                        </svg>
+                        <span>Toolbox</span>
+                    </a>
+
+                </nav>
+            </div>
+           <form method="POST" action="../login.html">
+                <input type="hidden" name="_token" autocomplete="off">
+                <button type="submit" class="signout-btn">
+                    <span>Sign out</span>
+                    <i class="fa-solid fa-right-from-bracket ms-2"></i>
+                </button>
+            </form>
+        </div>
+
+         <!-- Main Content -->
+        <div class="main-content">
+      
+            <!-- Top Header -->
+            <div class="top-header-wrapper">
+                <div class="top-header d-flex justify-content-between align-items-center ">
+                <div class="hamburger d-flex align-items-center" id="toggleSidebar">
+                    <img src="../assets/images/humburger.png" class="img-fluid" alt="">
+                    <h2>Agency Assigned Sites > Assign sites to Agency</h2>
+                </div>
+
+                <!-- User Profile Section -->
+                <div class="profile-box d-flex align-items-center">
+                    <div class="text-end me-3">
+                        <h5 class="profile-title">Super Admin</h5>
+                        <p class="profile-role text-muted">Super Admin</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Main Dashboard Content -->
+            <div class="dashboard-content w-100">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <a href="site-agency.html" class="btn btn-link text-decoration-none">
+                            <i class="fa-solid fa-arrow-left"></i> Back to list
+                        </a>
+                    </div>
+
+                    <form method="get" class="mb-3">
+                        <div class="row g-2 align-items-end">
+                            <div class="col-12 col-md-3">
+                                <label class="form-label mb-0">Search</label>
+                                <input type="text" name="search" value="" class="form-control" placeholder="Search by domain or name">
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <label class="form-label mb-0">Status</label>
+                                <select name="publish_status" class="form-select">
+                                    <option value="PUBLISHED" selected="">Published</option>
+                                    <option value="NOT_PUBLISHED_YET">Unpublished</option>
+                                    <option value="ALL">All</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <label class="form-label mb-0">Editor</label>
+                                <select name="editor" class="form-select">
+                                    <option value="ALL" selected="">All Editors</option>
+                                    <option value="ADVANCED-2.0">Editor 2.0</option>
+                                    <option value="ADVANCED">Editor 1.0 (Classic)</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-2">
+                                <label class="form-label mb-0">Label</label>
+                                <select name="labels[]" class="form-select">
+                                    <option value="">— Any —</option>
+                                    <option value="Editor 2.0">Editor 2.0</option>
+                                    <option value="API">API</option>
+                                    <option value="CauleyAPI">CauleyAPI</option>
+                                    <option value="Uplisting">Uplisting</option>
+                                    <option value="AI">AI</option>
+                                    <option value="Cleaning services">Cleaning services</option>
+                                    <option value="Marcell Media">Marcell Media</option>
+                                    <option value="Building materials">Building materials</option>
+                                    <option value="Training">Training</option>
+                                    <option value="Strategy">Strategy</option>
+                                    <option value="Health care">Health care</option>
+                                    <option value="Blue Goat Digital">Blue Goat Digital</option>
+                                    <option value="Fenestration">Fenestration</option>
+                                    <option value="Events">Events</option>
+                                    <option value="Entertainment">Entertainment</option>
+                                    <option value="Retail">Retail</option>
+                                    <option value="Sportwear">Sportwear</option>
+                                    <option value="Automotive">Automotive</option>
+                                    <option value="Education">Education</option>
+                                    <option value="Mediation">Mediation</option>
+                                    <option value="IT n Tech">IT n Tech</option>
+                                    <option value="Landscaping">Landscaping</option>
+                                    <option value="Audio Repair">Audio Repair</option>
+                                    <option value="Pet services">Pet services</option>
+                                    <option value="Surface Treatment">Surface Treatment</option>
+                                    <option value="Travel">Travel</option>
+                                    <option value="Food Services">Food Services</option>
+                                    <option value="Cleaning Supplies">Cleaning Supplies</option>
+                                    <option value="Equestrian">Equestrian</option>
+                                    <option value="Mosaic">Mosaic</option>
+                                    <option value="Marine">Marine</option>
+                                    <option value="Testing">Testing</option>
+                                    <option value="Haulage">Haulage</option>
+                                    <option value="Garden">Garden</option>
+                                    <option value="Sports n Leisure">Sports n Leisure</option>
+                                    <option value="Finance">Finance</option>
+                                    <option value="Mortgage">Mortgage</option>
+                                    <option value="Hair n Beauty">Hair n Beauty</option>
+                                    <option value="Ruben">Ruben</option>
+                                    <option value="Marketing">Marketing</option>
+                                    <option value="Web Design">Web Design</option>
+                                    <option value="Creative">Creative</option>
+                                    <option value="Food And Drink">Food And Drink</option>
+                                    <option value="Unavailable">Unavailable</option>
+                                    <option value="Business Communication">Business Communication</option>
+                                    <option value="HVAC">HVAC</option>
+                                    <option value="Charity">Charity</option>
+                                    <option value="Qualiprint">Qualiprint</option>
+                                    <option value="DMU - Free 1year">DMU - Free 1year</option>
+                                    <option value="Support services">Support services</option>
+                                    <option value="Arne Hössner">Arne Hössner</option>
+                                    <option value="Aesthetics">Aesthetics</option>
+                                    <option value="Maternity">Maternity</option>
+                                    <option value="NFT - CRYPTO">NFT - CRYPTO</option>
+                                    <option value="Networking">Networking</option>
+                                    <option value="Construction">Construction</option>
+                                    <option value="Psychology">Psychology</option>
+                                    <option value="Flooring">Flooring</option>
+                                    <option value="Childcare">Childcare</option>
+                                    <option value="Consulting">Consulting</option>
+                                    <option value="Property Maintenance">Property Maintenance</option>
+                                    <option value="Clothing">Clothing</option>
+                                    <option value="Venues">Venues</option>
+                                    <option value="Chloe Maddin">Chloe Maddin</option>
+                                    <option value="Ergonomics">Ergonomics</option>
+                                    <option value="Copywriting">Copywriting</option>
+                                    <option value="Caiger">Caiger</option>
+                                    <option value="Business Development">Business Development</option>
+                                    <option value="Youth Group">Youth Group</option>
+                                    <option value="Property">Property</option>
+                                    <option value="Facilities Management">Facilities Management</option>
+                                    <option value="Tourism">Tourism</option>
+                                    <option value="James Wellington">James Wellington</option>
+                                    <option value="Heritage">Heritage</option>
+                                    <option value="Surveying">Surveying</option>
+                                    <option value="Customer Support">Customer Support</option>
+                                    <option value="Water Tech">Water Tech</option>
+                                    <option value="Tattoo n Piercing Studio">Tattoo n Piercing Studio</option>
+                                    <option value="Industrial">Industrial</option>
+                                    <option value="All-Flex">All-Flex</option>
+                                    <option value="Vehicle Maintenance">Vehicle Maintenance</option>
+                                    <option value="Advisory">Advisory</option>
+                                    <option value="Waste management">Waste management</option>
+                                    <option value="HR">HR</option>
+                                    <option value="Recruitment">Recruitment</option>
+                                    <option value="Accountants">Accountants</option>
+                                    <option value="test-site">test-site</option>
+                                    <option value="Plumbing">Plumbing</option>
+                                    <option value="Church">Church</option>
+                                    <option value="Energy">Energy</option>
+                                    <option value="Repairs">Repairs</option>
+                                    <option value="Electrical">Electrical</option>
+                                    <option value="Health n safety">Health n safety</option>
+                                    <option value="Franchise">Franchise</option>
+                                    <option value="Utilities">Utilities</option>
+                                    <option value="BID">BID</option>
+                                    <option value="Engineering">Engineering</option>
+                                    <option value="Security">Security</option>
+                                    <option value="Wellbeing">Wellbeing</option>
+                                    <option value="Telecoms">Telecoms</option>
+                                    <option value="Author">Author</option>
+                                    <option value="Gifts n Crafts">Gifts n Crafts</option>
+                                    <option value="Arts">Arts</option>
+                                    <option value="Printing">Printing</option>
+                                    <option value="Media Production">Media Production</option>
+                                    <option value="Aquaculture">Aquaculture</option>
+                                    <option value="Will Writing">Will Writing</option>
+                                    <option value="Lift Services">Lift Services</option>
+                                    <option value="Artist">Artist</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-1 d-flex justify-content-end">
+                                <button class="btn btn-sm btn-main mt-3 mt-md-0" >Apply</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <form method="post" action="">
+                        <input type="hidden" name="_token" value="9kL1l9My4O67fD9kMjoNa8lSTgW1quEyO9JeGfex" autocomplete="off">
+                        <input type="hidden" name="_method" value="put">
+                        <input type="hidden" name="mode" value="add_only">
+
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">Assignment Details</h5>
+                                <span class="badge bg-light text-dark">Total: 252</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <label class="form-label">Agency</label>
+                                        <div class="form-control bg-light">Agency (ID: 1)</div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <label class="form-label d-flex justify-content-between align-items-center">New Sites To Assign
+                                            <a href="#" class="ms-2 small">Reset Filters</a>
+                                        </label>
+
+                                        <div class="table-responsive border rounded " style="max-height: 440px; overflow-y: auto;">
+                                            <table class="table table-sm align-middle mb-0" id="sitesTable">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th style="width: 60px;" class="text-muted">S.No</th>
+                                                        <th style="width: 48px;"><i class="bi bi-check2-square" aria-hidden="true"></i></th>
+                                                        <th>URL</th>
+                                                        <th>Label</th>
+                                                        <th>Preview</th>
+                                                        <th>Editor</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="siteRows">
+                                                    <tr data-site-id="571">
+                                                        <td class="text-muted">1</td>
+                                                        <td>
+                                                            <div class="form-check m-0">
+                                                                <input class="form-check-input site-checkbox" type="checkbox" name="site_ids[]" value="571">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-column">
+                                                                <span class="fw-semibold"><strong>www.ballitoautobody.co.za</strong></span>
+                                                                <small class="text-muted"><a href="#" target="_blank" rel="noopener">www.ballitoautobody.co.za</a></small>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-wrap gap-1">
+                                                                <span class="badge bg-light text-dark border">Blue Goat Digital</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <a href="https://preview.web-editor.ai/preview/1b6e4271?t=1777382432131" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary" title="Preview">
+                                                                <i class="fa-solid fa-eye"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td><span class="badge bg-secondary">Editor 1.0</span></td>
+                                                    </tr>
+                                                    <tr data-site-id="512">
+                                                        <td class="text-muted">2</td>
+                                                        <td>
+                                                            <div class="form-check m-0">
+                                                                <input class="form-check-input site-checkbox" type="checkbox" name="site_ids[]" value="512">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-column">
+                                                                <span class="fw-semibold"><strong>www.zimbali-seaview-villa.co.za</strong></span>
+                                                                <small class="text-muted"><a href="#" target="_blank" rel="noopener">www.zimbali-seaview-villa.co.za</a></small>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-wrap gap-1">
+                                                                <span class="badge bg-light text-dark border">Blue Goat Digital</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <a href="https://preview.web-editor.ai/preview/4ebaf038?t=1777382431608" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary" title="Preview">
+                                                                <i class="fa-solid fa-eye"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td><span class="badge bg-secondary">Editor 1.0</span></td>
+                                                    </tr>
+                                                    <tr data-site-id="538">
+                                                        <td class="text-muted">3</td>
+                                                        <td>
+                                                            <div class="form-check m-0">
+                                                                <input class="form-check-input site-checkbox" type="checkbox" name="site_ids[]" value="538">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-column">
+                                                                <span class="fw-semibold"><strong>www.weathersuresa.co.za</strong></span>
+                                                                <small class="text-muted"><a href="#" target="_blank" rel="noopener">www.weathersuresa.co.za</a></small>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-wrap gap-1">
+                                                                <span class="badge bg-light text-dark border">Blue Goat Digital</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <a href="https://preview.web-editor.ai/preview/316e4ef0?t=1777382431822" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary" title="Preview">
+                                                                <i class="fa-solid fa-eye"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td><span class="badge bg-secondary">Editor 1.0</span></td>
+                                                    </tr>
+                                                    <tr data-site-id="484">
+                                                        <td class="text-muted">4</td>
+                                                        <td>
+                                                            <div class="form-check m-0">
+                                                                <input class="form-check-input site-checkbox" type="checkbox" name="site_ids[]" value="484">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-column">
+                                                                <span class="fw-semibold"><strong>www.dreamdestination.co.za</strong></span>
+                                                                <small class="text-muted"><a href="#" target="_blank" rel="noopener">www.dreamdestination.co.za</a></small>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-wrap gap-1">
+                                                                <span class="badge bg-light text-dark border">Blue Goat Digital</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <a href="https://preview.web-editor.ai/preview/92e82f3b?t=1777382430913" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary" title="Preview">
+                                                                <i class="fa-solid fa-eye"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td><span class="badge bg-secondary">Editor 1.0</span></td>
+                                                    </tr>
+                                                    <tr data-site-id="427">
+                                                        <td class="text-muted">5</td>
+                                                        <td>
+                                                            <div class="form-check m-0">
+                                                                <input class="form-check-input site-checkbox" type="checkbox" name="site_ids[]" value="427">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-column">
+                                                                <span class="fw-semibold"><strong>www.principlesfinancial.com</strong></span>
+                                                                <small class="text-muted"><a href="#" target="_blank" rel="noopener">www.principlesfinancial.com</a></small>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-wrap gap-1">
+                                                                <span class="badge bg-light text-dark border">Blue Goat Digital</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <a href="https://preview.web-editor.ai/preview/11f049d7?t=1777382430350" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary" title="Preview">
+                                                                <i class="fa-solid fa-eye"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td><span class="badge bg-secondary">Editor 1.0</span></td>
+                                                    </tr>
+                                                    <tr data-site-id="459">
+                                                        <td class="text-muted">6</td>
+                                                        <td>
+                                                            <div class="form-check m-0">
+                                                                <input class="form-check-input site-checkbox" type="checkbox" name="site_ids[]" value="459">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-column">
+                                                                <span class="fw-semibold"><strong>www.aestheticelite.co.za</strong></span>
+                                                                <small class="text-muted"><a href="#" target="_blank" rel="noopener">www.aestheticelite.co.za</a></small>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-wrap gap-1">
+                                                                <span class="badge bg-light text-dark border">Blue Goat Digital</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <a href="https://preview.web-editor.ai/preview/4404b909?t=1777382430660" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary" title="Preview">
+                                                                <i class="fa-solid fa-eye"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td><span class="badge bg-secondary">Editor 1.0</span></td>
+                                                    </tr>
+                                                    <tr data-site-id="553">
+                                                        <td class="text-muted">7</td>
+                                                        <td>
+                                                            <div class="form-check m-0">
+                                                                <input class="form-check-input site-checkbox" type="checkbox" name="site_ids[]" value="553">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-column">
+                                                                <span class="fw-semibold"><strong>www.mpumeleloservices.co.za</strong></span>
+                                                                <small class="text-muted"><a href="#" target="_blank" rel="noopener">www.mpumeleloservices.co.za</a></small>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-wrap gap-1">
+                                                                <span class="badge bg-light text-dark border">Blue Goat Digital</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <a href="https://preview.web-editor.ai/preview/229156c7?t=1777382431950" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary" title="Preview">
+                                                                <i class="fa-solid fa-eye"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td><span class="badge bg-secondary">Editor 1.0</span></td>
+                                                    </tr>
+                                                    <tr data-site-id="539">
+                                                        <td class="text-muted">8</td>
+                                                        <td>
+                                                            <div class="form-check m-0">
+                                                                <input class="form-check-input site-checkbox" type="checkbox" name="site_ids[]" value="539">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-column">
+                                                                <span class="fw-semibold"><strong>www.parsonsletting.co.za</strong></span>
+                                                                <small class="text-muted"><a href="#" target="_blank" rel="noopener">www.parsonsletting.co.za</a></small>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-wrap gap-1">
+                                                                <span class="badge bg-light text-dark border">Blue Goat Digital</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <a href="https://preview.web-editor.ai/preview/748cefc9?t=1777382431831" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary" title="Preview">
+                                                                <i class="fa-solid fa-eye"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td><span class="badge bg-secondary">Editor 1.0</span></td>
+                                                    </tr>
+                                                    <tr data-site-id="519">
+                                                        <td class="text-muted">9</td>
+                                                        <td>
+                                                            <div class="form-check m-0">
+                                                                <input class="form-check-input site-checkbox" type="checkbox" name="site_ids[]" value="519">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-column">
+                                                                <span class="fw-semibold"><strong>www.dcwm.co.za</strong></span>
+                                                                <small class="text-muted"><a href="#" target="_blank" rel="noopener">www.dcwm.co.za</a></small>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-wrap gap-1">
+                                                                <span class="badge bg-light text-dark border">Blue Goat Digital</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <a href="https://preview.web-editor.ai/preview/4e618e2c?t=1777382431667" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary" title="Preview">
+                                                                <i class="fa-solid fa-eye"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td><span class="badge bg-secondary">Editor 1.0</span></td>
+                                                    </tr>
+                                                    <tr data-site-id="563">
+                                                        <td class="text-muted">10</td>
+                                                        <td>
+                                                            <div class="form-check m-0">
+                                                                <input class="form-check-input site-checkbox" type="checkbox" name="site_ids[]" value="563">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-column">
+                                                                <span class="fw-semibold"><strong>www.clippasystems.co.za</strong></span>
+                                                                <small class="text-muted"><a href="#" target="_blank" rel="noopener">www.clippasystems.co.za</a></small>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-wrap gap-1">
+                                                                <span class="badge bg-light text-dark border">Blue Goat Digital</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <a href="https://preview.web-editor.ai/preview/7727a5b6?t=1777382432062" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary" title="Preview">
+                                                                <i class="fa-solid fa-eye"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td><span class="badge bg-secondary">Editor 1.0</span></td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-main">Update</button>
+                        </div>
+                    </form>
+
+                    <label class="form-label">Assigned Sites</label>
+                    <div class="border rounded p-3">
+                        <div class="d-flex align-items-start justify-content-between mb-2">
+                            <div>
+                                <div class="fw-semibold">7088e6cd</div>
+                                <div><a href="#" target="_blank" rel="noopener">https://testabc17e19648.multiscreensite.com</a></div>
+                                <div><span class="badge bg-secondary">ADVANCED-2.0</span></div>
+                            </div>
+                            <div>
+                                <form method="post" action="https://sandbox.kangaroodev.co.uk/kuk_sites/admin/site-agency/1" onsubmit="return confirm('Remove this assigned site?');">
+                                    <input type="hidden" name="_token" value="9kL1l9My4O67fD9kMjoNa8lSTgW1quEyO9JeGfex" autocomplete="off">
+                                    <input type="hidden" name="_method" value="delete">
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start justify-content-between mb-2">
+                            <div>
+                                <div class="fw-semibold">b6ed6942</div>
+                                <div><a href="#" target="_blank" rel="noopener">https://publishtest.multiscreensite.com</a></div>
+                                <div><span class="badge bg-secondary">ADVANCED-2.0</span></div>
+                            </div>
+                            <div>
+                                <form method="post" action="" onsubmit="return confirm('Remove this assigned site?');">
+                                    <input type="hidden" name="_token" value="9kL1l9My4O67fD9kMjoNa8lSTgW1quEyO9JeGfex" autocomplete="off">
+                                    <input type="hidden" name="_method" value="delete">
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="sidebar-overlay overlay" id="sidebarOverlay"></div>
+
+    <!-- javascript  -->
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

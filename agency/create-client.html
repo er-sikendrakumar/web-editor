@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-EDITOR</title>
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+        <script src="../assets/js/web-editor-jquery.min.js"></script>
+
+</head>
+<body>
+    <main class="wrapper">
+        <div class="sidebar sidebar-main-box" id="sidebar">
+            <span class="close-sidebar d-lg-none txt-red">×</span>
+            <div class="sidebar-content">
+                <div class="logo">
+                <img src="../assets/images/your-logo-white.png" alt="WEB-EDITOR" class="img-fluid">
+                </div>
+                <nav class="nav side-nav-box flex-column">
+                    <a class="nav-link active" href="index.html">
+                        <i class="fa-solid fa-gauge-high me-2"></i>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a class="nav-link" href="all-sites.html">
+                        <i class="fa-solid fa-globe me-2"></i>
+                        <span>All Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="site-builder.html">
+                        <i class="fa-solid fa-layer-group me-2"></i>
+                        <span>Site Builder</span>
+                    </a>
+
+                    <a class="nav-link" href="clients.html">
+                        <i class="fa-solid fa-user-tie me-2"></i>
+                        <span>Clients</span>
+                    </a>
+
+                    <a class="nav-link" href="staff-user.html">
+                        <i class="fa-solid fa-users me-2"></i>
+                        <span>Staff Users</span>
+                    </a>
+
+                    <a class="nav-link" href="shared-sites.html">
+                        <i class="fa-solid fa-share-nodes me-2"></i>
+                        <span>Shared Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="support.html">
+                        <i class="fa-solid fa-headset me-2"></i>
+                        <span>Support</span>
+                    </a> 
+                    <a class="nav-link" href="setting.html">
+                        <i class="fa-solid fa-gear me-2"></i>
+                        <span>Settings</span>
+                    </a>
+
+                    <a class="nav-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640" fill="white">
+                          <path d="M160 96C142.3 96 128 110.3 128 128C128 145.7 142.3 160 160 160L288 160L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 160L480 160C497.7 160 512 145.7 512 128C512 110.3 497.7 96 480 96L160 96z"></path>
+                        </svg>
+                        <span>Toolbox</span>
+                    </a>
+
+                </nav>
+            </div>
+           <form method="POST" action="../login.html">
+                <input type="hidden" name="_token" autocomplete="off">
+                <button type="submit" class="signout-btn">
+                    <span>Sign out</span>
+                    <i class="fa-solid fa-right-from-bracket ms-2"></i>
+                </button>
+            </form>
+        </div>
+
+         <!-- Main Content -->
+        <div class="main-content">
+      
+            <!-- Top Header -->
+            <div class="top-header-wrapper">
+                <div class="top-header d-flex justify-content-between align-items-center ">
+                <div class="hamburger d-flex align-items-center" id="toggleSidebar">
+                    <img src="../assets/images/humburger.png" class="img-fluid" alt="">
+                    <h2>Clients > Create Client</h2>
+                </div>
+
+                <!-- User Profile Section -->
+                <div class="profile-box d-flex align-items-center">
+                    <div class="text-end me-3">
+                        <h5 class="profile-title">Agency</h5>
+                        <p class="profile-role text-muted">Agency Admin</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Main Dashboard Content -->
+            <div class="dashboard-content w-100">
+                <div class="web-list-container">
+                    <div class="d-flex justify-content-end align-items-center mb-3">
+                        <a href="clients.html" class="btn btn-outline-secondary border-outline">Assign From Shared Sites</a>
+                    </div>
+                    <form method="post" action="#" class="card" id="clientCreateForm">
+                        <input type="hidden" name="_token" value="yxPD97TVvn36tDogKKR5uEV7em83hyYEUXto3Ojw" autocomplete="off">
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" name="name" class="form-control" value="" required="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" name="email" class="form-control" value="" required="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" name="password" class="form-control box-radius-50" required="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone</label>
+                                    <input type="text" name="phone_number" class="form-control box-radius-50" value="">
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Assign Sites</label>
+
+                                <div class="text-muted mb-2" style="font-size:13px;">Optional. You can assign sites now or later from Shared Sites.</div>
+
+                                <div class="site-toolbar">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <button type="button" class="toggle-link" id="selectAllSites">Select All</button>
+                                        <span class="text-muted" style="font-size:13px;">|</span>
+                                        <button type="button" class="toggle-link" id="deselectAllSites">Deselect All</button>
+                                    </div>
+                                    <span class="site-counter" id="siteSelectionCount"></span>
+                                </div>
+                                <div class="site-pick-list" id="sitePickList">
+                                    <div class="site-search-box">
+                                        <input type="text" id="siteSearchInput" placeholder="Search sites...">
+                                    </div>
+                                    <label class="site-pick-item " data-search="publishtest.multiscreensite.com b6ed6942">
+                                        <input class="form-check-input site-checkbox" type="checkbox" name="site_id[]" value="840">
+                                        <div class="site-pick-info">
+                                            <div class="site-pick-domain">publishtest.multiscreensite.com</div>
+                                            <div class="site-pick-name">b6ed6942</div>
+                                        </div>
+                                    </label>
+                                    <label class="site-pick-item " data-search="testabc17e19648.multiscreensite.com 7088e6cd">
+                                        <input class="form-check-input site-checkbox" type="checkbox" name="site_id[]" value="839">
+                                        <div class="site-pick-info">
+                                            <div class="site-pick-domain">testabc17e19648.multiscreensite.com</div>
+                                            <div class="site-pick-name">7088e6cd</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Duda Permissions</label>
+                                <div class="text-muted mb-2" style="font-size:13px;">Select the permissions to grant for the selected sites. Leave all unchecked to store the site assignment without site-specific Duda permissions.</div>
+                                <div class="site-toolbar">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <button type="button" class="toggle-link" id="selectAllPerms">Select All</button>
+                                        <span class="text-muted" style="font-size:13px;">|</span>
+                                        <button type="button" class="toggle-link" id="deselectAllPerms">Deselect All</button>
+                                    </div>
+                                    <span class="site-counter" id="permSelectionCount"></span>
+                                </div>
+                                <div class="perm-pick-list">
+                                    <label class="perm-pick-item ">
+                                        <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="ADD_FLEX" data-dependency="EDIT">
+                                        <div class="perm-pick-info">
+                                            <div class="perm-pick-label">Add Flex</div>
+                                            <div class="perm-pick-desc">Can add new flex sections to sites built with the Classic editor.</div>
+                                            <div class="perm-pick-dep">
+                                                <span class="badge">Requires: EDIT</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="perm-pick-item ">
+                                        <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="BACKUPS" data-dependency="LIMITED_EDITING">
+                                        <div class="perm-pick-info">
+                                            <div class="perm-pick-label">Backups</div>
+                                            <div class="perm-pick-desc">Can create, preview, restore, and delete site backup versions.</div>
+                                            <div class="perm-pick-dep">
+                                                <span class="badge">Requires: LIMITED_EDITING</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="perm-pick-item ">
+                                        <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="BLOG" data-dependency="">
+                                        <div class="perm-pick-info">
+                                            <div class="perm-pick-label">Blog</div>
+                                            <div class="perm-pick-desc">Can add, edit or manage blog posts. Editing post content includes adding widgets to posts.</div>
+                                        </div>
+                                    </label>
+                                    <label class="perm-pick-item ">
+                                        <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="DEV_MODE" data-dependency="EDIT">
+                                        <div class="perm-pick-info">
+                                            <div class="perm-pick-label">Dev Mode</div>
+                                            <div class="perm-pick-desc">Can access and edit the site’s HTML and CSS code on the canvas and in Dev Mode.</div>
+                                            <div class="perm-pick-dep">
+                                                <span class="badge">Requires: EDIT</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="perm-pick-item ">
+                                        <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="EDIT" data-dependency="BLOG, LIMITED_EDITING">
+                                        <div class="perm-pick-info">
+                                            <div class="perm-pick-label">Edit</div>
+                                            <div class="perm-pick-desc">Can add and manage widgets, site pages, and popups. Can also edit the site’s design including Site Theme, and manage site settings. Granting this permission automatically grants the blog and widget content permissions as well.</div>
+                                            <div class="perm-pick-dep">
+                                                <span class="badge">Requires: BLOG, LIMITED_EDITING</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="perm-pick-item ">
+                                        <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="INSITE" data-dependency="EDIT">
+                                        <div class="perm-pick-info">
+                                            <div class="perm-pick-label">Insite</div>
+                                            <div class="perm-pick-desc">Can set and manage Site Personalization rules, including popups, special promotions, and more.</div>
+                                            <div class="perm-pick-dep">
+                                                <span class="badge">Requires: EDIT</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="perm-pick-item ">
+                                        <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="LIMITED_EDITING" data-dependency="">
+                                        <div class="perm-pick-info">
+                                            <div class="perm-pick-label">Limited Editing</div>
+                                            <div class="perm-pick-desc">Can edit the content of existing widgets on a site like site texts and others with textual content, but can’t edit their design or delete them.</div>
+                                        </div>
+                                    </label>
+                                    <label class="perm-pick-item ">
+                                        <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="PUBLISH" data-dependency="">
+                                        <div class="perm-pick-info">
+                                            <div class="perm-pick-label">Publish</div>
+                                            <div class="perm-pick-desc">Can publish the site for the first time (triggering a charge for the account owner), as well as republish and unpublish it.</div>
+                                        </div>
+                                    </label>
+                                    <label class="perm-pick-item ">
+                                        <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="REPUBLISH" data-dependency="EDIT">
+                                        <div class="perm-pick-info">
+                                            <div class="perm-pick-label">Republish</div>
+                                            <div class="perm-pick-desc">Can republish a live site to make any editor changes live online.</div>
+                                            <div class="perm-pick-dep">
+                                                <span class="badge">Requires: EDIT</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="perm-pick-item ">
+                                        <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="SEO" data-dependency="EDIT">
+                                        <div class="perm-pick-info">
+                                            <div class="perm-pick-label">SEO</div>
+                                            <div class="perm-pick-desc">Can access and manage site and page-level SEO settings, connect Google tools and analytics, and set URL redirects.</div>
+                                            <div class="perm-pick-dep">
+                                                <span class="badge">Requires: EDIT</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="perm-pick-item ">
+                                        <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="SITE_COMMENTS" data-dependency="">
+                                        <div class="perm-pick-info">
+                                            <div class="perm-pick-label">Site Comments</div>
+                                            <div class="perm-pick-desc">Can access, add and delete comments on this site.</div>
+                                        </div>
+                                    </label>
+                                    <label class="perm-pick-item ">
+                                        <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="STATS_TAB" data-dependency="">
+                                        <div class="perm-pick-info">
+                                            <div class="perm-pick-label">Stats Tab</div>
+                                            <div class="perm-pick-desc">Can access and see the stats of all sites in this account.</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="mb-0 d-flex align-items-center gap-2">
+                                <input type="hidden" name="send_email" value="0">
+                                <input type="checkbox" id="send_email" name="send_email" value="1">
+                                <label for="send_email" class="mb-0">Send welcome email to client</label>
+                            </div>
+                        </div>
+
+                        <div class="card-footer bg-white">
+                            <a href="clients.html" class="btn btn-outline-secondary border-outline">Cancel</a>
+                            <button class="btn btn-primary" type="submit">Create Client</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="sidebar-overlay overlay" id="sidebarOverlay"></div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var form = document.getElementById("clientCreateForm");
+                    var requireSiteSelection = false;
+                    var siteCheckboxes = Array.from(document.querySelectorAll('.site-checkbox'));
+                    var siteCountEl = document.getElementById('siteSelectionCount');
+                    var siteSearch = document.getElementById('siteSearchInput');
+                    var selectAllSitesButton = document.getElementById('selectAllSites');
+                    var deselectAllSitesButton = document.getElementById('deselectAllSites');
+            
+                    function updateSiteCount() {
+                        var checked = siteCheckboxes.filter(function (checkbox) { return checkbox.checked; }).length;
+                        if (siteCountEl) {
+                            siteCountEl.textContent = checked > 0 ? checked + ' of ' + siteCheckboxes.length + ' selected' : '';
+                        }
+                    }
+            
+                    siteCheckboxes.forEach(function (checkbox) {
+                        checkbox.addEventListener('change', function () {
+                            checkbox.closest('.site-pick-item').classList.toggle('checked', checkbox.checked);
+                            updateSiteCount();
+                        });
+                    });
+            
+                    updateSiteCount();
+            
+                    if (selectAllSitesButton) {
+                        selectAllSitesButton.addEventListener('click', function () {
+                            siteCheckboxes.forEach(function (checkbox) {
+                                var item = checkbox.closest('.site-pick-item');
+                                if (!item.style.display || item.style.display !== 'none') {
+                                    checkbox.checked = true;
+                                    item.classList.add('checked');
+                                }
+                            });
+                            updateSiteCount();
+                        });
+                    }
+            
+                    if (deselectAllSitesButton) {
+                        deselectAllSitesButton.addEventListener('click', function () {
+                            siteCheckboxes.forEach(function (checkbox) {
+                                checkbox.checked = false;
+                                checkbox.closest('.site-pick-item').classList.remove('checked');
+                            });
+                            updateSiteCount();
+                        });
+                    }
+            
+                    if (siteSearch) {
+                        siteSearch.addEventListener('input', function () {
+                            var query = this.value.toLowerCase().trim();
+                            document.querySelectorAll('.site-pick-item').forEach(function (item) {
+                                var text = item.getAttribute('data-search') || '';
+                                item.style.display = (!query || text.indexOf(query) !== -1) ? '' : 'none';
+                            });
+                        });
+                    }
+            
+                    if (form && requireSiteSelection) {
+                        form.addEventListener('submit', function (event) {
+                            var anyChecked = siteCheckboxes.some(function (checkbox) { return checkbox.checked; });
+                            if (!anyChecked) {
+                                event.preventDefault();
+                                alert('Please select at least one site.');
+                            }
+                        });
+                    }
+            
+                    var permissionCheckboxes = Array.from(document.querySelectorAll('.perm-checkbox'));
+                    var permCountEl = document.getElementById('permSelectionCount');
+                    var selectAllPermsButton = document.getElementById('selectAllPerms');
+                    var deselectAllPermsButton = document.getElementById('deselectAllPerms');
+            
+                    function updatePermCount() {
+                        var checked = permissionCheckboxes.filter(function (checkbox) { return checkbox.checked; }).length;
+                        if (permCountEl) {
+                            permCountEl.textContent = checked > 0 ? checked + ' of ' + permissionCheckboxes.length + ' selected' : '';
+                        }
+                    }
+            
+                    function toggleItemHighlight(checkbox) {
+                        checkbox.closest('.perm-pick-item').classList.toggle('checked', checkbox.checked);
+                    }
+            
+                    if (!permissionCheckboxes.length) {
+                        return;
+                    }
+            
+                    var byValue = new Map();
+                    var dependencyOf = new Map();
+                    var dependentsOf = new Map();
+            
+                    permissionCheckboxes.forEach(function (checkbox) {
+                        byValue.set(checkbox.value, checkbox);
+                        var dependency = (checkbox.dataset.dependency || '').trim();
+                        if (dependency) {
+                            dependencyOf.set(checkbox.value, dependency);
+                            if (!dependentsOf.has(dependency)) {
+                                dependentsOf.set(dependency, new Set());
+                            }
+                            dependentsOf.get(dependency).add(checkbox.value);
+                        }
+                    });
+            
+                    function checkWithDependencies(value, visited) {
+                        visited = visited || new Set();
+                        if (visited.has(value)) {
+                            return;
+                        }
+            
+                        visited.add(value);
+                        var checkbox = byValue.get(value);
+            
+                        if (checkbox && !checkbox.checked) {
+                            checkbox.checked = true;
+                            toggleItemHighlight(checkbox);
+                        }
+            
+                        var parent = dependencyOf.get(value);
+                        if (parent && byValue.has(parent)) {
+                            checkWithDependencies(parent, visited);
+                        }
+                    }
+            
+                    function uncheckDependentsRecursively(value, visited) {
+                        visited = visited || new Set();
+                        if (visited.has(value)) {
+                            return;
+                        }
+            
+                        visited.add(value);
+                        var children = dependentsOf.get(value);
+                        if (!children) {
+                            return;
+                        }
+            
+                        children.forEach(function (child) {
+                            var childCheckbox = byValue.get(child);
+                            if (childCheckbox && childCheckbox.checked) {
+                                childCheckbox.checked = false;
+                                toggleItemHighlight(childCheckbox);
+                                uncheckDependentsRecursively(child, visited);
+                            }
+                        });
+                    }
+            
+                    permissionCheckboxes.forEach(function (checkbox) {
+                        checkbox.addEventListener('change', function () {
+                            if (checkbox.checked) {
+                                checkWithDependencies(checkbox.value);
+                            } else {
+                                toggleItemHighlight(checkbox);
+                                uncheckDependentsRecursively(checkbox.value);
+                            }
+                            updatePermCount();
+                        });
+                    });
+            
+                    permissionCheckboxes.forEach(function (checkbox) {
+                        if (checkbox.checked) {
+                            checkWithDependencies(checkbox.value);
+                        }
+                    });
+            
+                    updatePermCount();
+            
+                    if (selectAllPermsButton) {
+                        selectAllPermsButton.addEventListener('click', function () {
+                            permissionCheckboxes.forEach(function (checkbox) {
+                                checkbox.checked = true;
+                                toggleItemHighlight(checkbox);
+                            });
+                            updatePermCount();
+                        });
+                    }
+            
+                    if (deselectAllPermsButton) {
+                        deselectAllPermsButton.addEventListener('click', function () {
+                            permissionCheckboxes.forEach(function (checkbox) {
+                                checkbox.checked = false;
+                                toggleItemHighlight(checkbox);
+                            });
+                            updatePermCount();
+                        });
+                    }
+                });
+            </script>
+    <!-- javascript  -->
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

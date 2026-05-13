@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-EDITOR</title>
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+        <script src="../assets/js/web-editor-jquery.min.js"></script>
+
+</head>
+<body>
+    <main class="wrapper">
+        <div class="sidebar sidebar-main-box" id="sidebar">
+            <span class="close-sidebar d-lg-none txt-red">×</span>
+            <div class="sidebar-content">
+                <div class="logo">
+                <img src="../assets/images/your-logo-white.png" alt="WEB-EDITOR" class="img-fluid">
+                </div>
+                <nav class="nav side-nav-box flex-column">
+                    <a class="nav-link active" href="index.html">
+                        <i class="fa-solid fa-gauge-high me-2"></i>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a class="nav-link" href="all-sites.html">
+                        <i class="fa-solid fa-globe me-2"></i>
+                        <span>All Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="site-builder.html">
+                        <i class="fa-solid fa-layer-group me-2"></i>
+                        <span>Site Builder</span>
+                    </a>
+
+                    <a class="nav-link" href="clients.html">
+                        <i class="fa-solid fa-user-tie me-2"></i>
+                        <span>Clients</span>
+                    </a>
+
+                    <a class="nav-link" href="staff-user.html">
+                        <i class="fa-solid fa-users me-2"></i>
+                        <span>Staff Users</span>
+                    </a>
+
+                    <a class="nav-link" href="shared-sites.html">
+                        <i class="fa-solid fa-share-nodes me-2"></i>
+                        <span>Shared Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="support.html">
+                        <i class="fa-solid fa-headset me-2"></i>
+                        <span>Support</span>
+                    </a> 
+                    <a class="nav-link" href="setting.html">
+                        <i class="fa-solid fa-gear me-2"></i>
+                        <span>Settings</span>
+                    </a>
+
+                    <a class="nav-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640" fill="white">
+                          <path d="M160 96C142.3 96 128 110.3 128 128C128 145.7 142.3 160 160 160L288 160L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 160L480 160C497.7 160 512 145.7 512 128C512 110.3 497.7 96 480 96L160 96z"></path>
+                        </svg>
+                        <span>Toolbox</span>
+                    </a>
+
+                </nav>
+            </div>
+           <form method="POST" action="../login.html">
+                <input type="hidden" name="_token" autocomplete="off">
+                <button type="submit" class="signout-btn">
+                    <span>Sign out</span>
+                    <i class="fa-solid fa-right-from-bracket ms-2"></i>
+                </button>
+            </form>
+        </div>
+
+         <!-- Main Content -->
+        <div class="main-content">
+      
+            <!-- Top Header -->
+            <div class="top-header-wrapper">
+                <div class="top-header d-flex justify-content-between align-items-center ">
+                <div class="hamburger d-flex align-items-center" id="toggleSidebar">
+                    <img src="../assets/images/humburger.png" class="img-fluid" alt="">
+                    <h2>Shared Sites > Staff > Edit</h2>
+                </div>
+
+                <!-- User Profile Section -->
+                <div class="profile-box d-flex align-items-center">
+                    <div class="text-end me-3">
+                        <h5 class="profile-title">Agency</h5>
+                        <p class="profile-role text-muted">Agency Admin</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Main Dashboard Content -->
+            <div class="dashboard-content w-100">
+                <div class="web-list-container">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h2 class="main-title mb-0">Edit Shared Site</h2>
+                        <a href="shared-sites-staff.html" class="btn btn-outline-secondary border-outline">Back</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <form method="POST" action="">
+                                <input type="hidden" name="_token" value="yxPD97TVvn36tDogKKR5uEV7em83hyYEUXto3Ojw" autocomplete="off">
+                                <input type="hidden" name="_method" value="PUT">
+                                <input type="hidden" name="type" value="staff">
+                                <div class="mb-3">
+                                    <label class="form-label">Staff</label>
+                                    <select name="user_id" class="form-select" required="">
+                                        <option value="5">agency (test@agencystaff.com)</option>
+                                        <option value="6" selected="">Staff Test (staff@one.com)</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Site</label>
+                                    <select name="site_id" class="form-select" required="">
+                                        <option value="840" selected="">publishtest.multiscreensite.com — b6ed6942</option>
+                                        <option value="839">testabc17e19648.multiscreensite.com — 7088e6cd</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Duda Permissions for this site</label>
+                                    <div class="text-muted mb-2">Adjust the permissions for this site. You cannot grant permissions you don't have. If none selected, a default comprehensive set will be applied.</div>
+
+                                    <div class="table-responsive">
+                                        <table class="table table-sm table-hover align-middle mb-0">
+                                            <thead class="table-light position-sticky top-0">
+                                                <tr>
+                                                    <th style="width: 48px;">Select</th>
+                                                    <th>Permission</th>
+                                                    <th style="min-width: 320px;">Description</th>
+                                                    <th style="width: 160px;">Depends on</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check m-0">
+                                                            <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="ADD_FLEX" id="perm0" data-dependency="EDIT" checked="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="perm0" class="form-check-label fw-semibold">Add Flex</label>
+                                                    </td>
+                                                    <td class="text-muted small">Can add new flex sections to sites built with the Classic editor.</td>
+                                                    <td>
+                                                        <span class="badge bg-secondary">EDIT</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check m-0">
+                                                            <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="BACKUPS" id="perm1" data-dependency="LIMITED_EDITING" checked="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="perm1" class="form-check-label fw-semibold">Backups</label>
+                                                    </td>
+                                                    <td class="text-muted small">Can create, preview, restore, and delete site backup versions.</td>
+                                                    <td>
+                                                        <span class="badge bg-secondary">LIMITED_EDITING</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check m-0">
+                                                            <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="BLOG" id="perm2" data-dependency="" checked="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="perm2" class="form-check-label fw-semibold">Blog</label>
+                                                    </td>
+                                                    <td class="text-muted small">Can add, edit or manage blog posts. Editing post content includes adding widgets to posts.</td>
+                                                    <td>
+                                                        <span class="text-muted small">None</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check m-0">
+                                                            <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="DEV_MODE" id="perm3" data-dependency="EDIT" checked="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="perm3" class="form-check-label fw-semibold">Dev Mode</label>
+                                                    </td>
+                                                    <td class="text-muted small">Can access and edit the site’s HTML and CSS code on the canvas and in Dev Mode.</td>
+                                                    <td>
+                                                        <span class="badge bg-secondary">EDIT</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check m-0">
+                                                            <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="EDIT" id="perm4" data-dependency="BLOG, LIMITED_EDITING" checked="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="perm4" class="form-check-label fw-semibold">Edit</label>
+                                                    </td>
+                                                    <td class="text-muted small">Can add and manage widgets, site pages, and popups. Can also edit the site’s design including Site Theme, and manage site settings. Granting this permission automatically grants the blog and widget content permissions
+                                                        as well.</td>
+                                                    <td>
+                                                        <span class="badge bg-secondary">BLOG, LIMITED_EDITING</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check m-0">
+                                                            <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="INSITE" id="perm5" data-dependency="EDIT" checked="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="perm5" class="form-check-label fw-semibold">Insite</label>
+                                                    </td>
+                                                    <td class="text-muted small">Can set and manage Site Personalization rules, including popups, special promotions, and more.</td>
+                                                    <td>
+                                                        <span class="badge bg-secondary">EDIT</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check m-0">
+                                                            <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="LIMITED_EDITING" id="perm6" data-dependency="" checked="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="perm6" class="form-check-label fw-semibold">Limited Editing</label>
+                                                    </td>
+                                                    <td class="text-muted small">Can edit the content of existing widgets on a site like site texts and others with textual content, but can’t edit their design or delete them.</td>
+                                                    <td>
+                                                        <span class="text-muted small">None</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check m-0">
+                                                            <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="PUBLISH" id="perm7" data-dependency="" checked="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="perm7" class="form-check-label fw-semibold">Publish</label>
+                                                    </td>
+                                                    <td class="text-muted small">Can publish the site for the first time (triggering a charge for the account owner), as well as republish and unpublish it.</td>
+                                                    <td>
+                                                        <span class="text-muted small">None</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check m-0">
+                                                            <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="REPUBLISH" id="perm8" data-dependency="EDIT" checked="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="perm8" class="form-check-label fw-semibold">Republish</label>
+                                                    </td>
+                                                    <td class="text-muted small">Can republish a live site to make any editor changes live online.</td>
+                                                    <td>
+                                                        <span class="badge bg-secondary">EDIT</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check m-0">
+                                                            <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="SEO" id="perm9" data-dependency="EDIT" checked="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="perm9" class="form-check-label fw-semibold">SEO</label>
+                                                    </td>
+                                                    <td class="text-muted small">Can access and manage site and page-level SEO settings, connect Google tools and analytics, and set URL redirects.</td>
+                                                    <td>
+                                                        <span class="badge bg-secondary">EDIT</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check m-0">
+                                                            <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="SITE_COMMENTS" id="perm10" data-dependency="" checked="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="perm10" class="form-check-label fw-semibold">Site Comments</label>
+                                                    </td>
+                                                    <td class="text-muted small">Can access, add and delete comments on this site.</td>
+                                                    <td>
+                                                        <span class="text-muted small">None</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check m-0">
+                                                            <input class="form-check-input perm-checkbox" type="checkbox" name="permissions[]" value="STATS_TAB" id="perm11" data-dependency="" checked="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="perm11" class="form-check-label fw-semibold">Stats Tab</label>
+                                                    </td>
+                                                    <td class="text-muted small">Can access and see the stats of all sites in this account.</td>
+                                                    <td>
+                                                        <span class="text-muted small">None</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="text-end">
+                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="sidebar-overlay overlay" id="sidebarOverlay"></div>
+
+    <!-- javascript  -->
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

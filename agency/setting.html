@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB-EDITOR</title>
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-        <script src="assets/js/web-editor-jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+        <script src="../assets/js/web-editor-jquery.min.js"></script>
 
 </head>
 <body>
@@ -19,7 +19,7 @@
             <span class="close-sidebar d-lg-none txt-red">×</span>
             <div class="sidebar-content">
                 <div class="logo">
-                <img src="assets/images/web-dash-white.png" alt="WEB-EDITOR" class="img-fluid">
+                <img src="../assets/images/your-logo-white.png" alt="WEB-EDITOR" class="img-fluid">
                 </div>
                 <nav class="nav side-nav-box flex-column">
                     <a class="nav-link active" href="index.html">
@@ -32,34 +32,24 @@
                         <span>All Sites</span>
                     </a>
 
-                    <a class="nav-link" href="pending-registrations.html">
-                        <i class="fa-solid fa-user-clock me-2"></i>
-                        <span>Pending Registrations</span>
-                    </a>
-
                     <a class="nav-link" href="site-builder.html">
                         <i class="fa-solid fa-layer-group me-2"></i>
                         <span>Site Builder</span>
                     </a>
 
-                    <a class="nav-link" href="all-users.html">
+                    <a class="nav-link" href="clients.html">
+                        <i class="fa-solid fa-user-tie me-2"></i>
+                        <span>Clients</span>
+                    </a>
+
+                    <a class="nav-link" href="staff-user.html">
                         <i class="fa-solid fa-users me-2"></i>
-                        <span>All Users</span>
+                        <span>Staff Users</span>
                     </a>
 
-                    <a class="nav-link" href="site-agency.html">
-                        <i class="fa-solid fa-building-user me-2"></i>
-                        <span>Agency Assigned Sites</span>
-                    </a>
-
-                    <a class="nav-link" href="site-user.html">
-                        <i class="fa-solid fa-user-check me-2"></i>
-                        <span>User Assigned Sites</span>
-                    </a>
-
-                    <a class="nav-link" href="subscriptions.html">
-                        <i class="fa-solid fa-receipt me-2"></i>
-                        <span>Subscriptions</span>
+                    <a class="nav-link" href="shared-sites.html">
+                        <i class="fa-solid fa-share-nodes me-2"></i>
+                        <span>Shared Sites</span>
                     </a>
 
                     <a class="nav-link" href="support.html">
@@ -80,9 +70,10 @@
 
                 </nav>
             </div>
-            <form method="POST">
-                <input type="hidden" name="_token"  autocomplete="off">  
-                <button type="submit" class="signout-btn"><span>Sign out</span>
+           <form method="POST" action="../login.html">
+                <input type="hidden" name="_token" autocomplete="off">
+                <button type="submit" class="signout-btn">
+                    <span>Sign out</span>
                     <i class="fa-solid fa-right-from-bracket ms-2"></i>
                 </button>
             </form>
@@ -95,15 +86,15 @@
             <div class="top-header-wrapper">
                 <div class="top-header d-flex justify-content-between align-items-center ">
                 <div class="hamburger d-flex align-items-center" id="toggleSidebar">
-                    <img src="assets/images/humburger.png" class="img-fluid" alt="">
-                    <h2>Settings</h2>
+                    <img src="../assets/images/humburger.png" class="img-fluid" alt="">
+                    <h2 class="ms-2">Settings</h2>
                 </div>
 
                 <!-- User Profile Section -->
                 <div class="profile-box d-flex align-items-center">
                     <div class="text-end me-3">
-                        <h5 class="profile-title">Super Admin</h5>
-                        <p class="profile-role text-muted">Super Admin</p>
+                        <h5 class="profile-title">Agency</h5>
+                        <p class="profile-role text-muted">Agency Admin</p>
                     </div>
                 </div>
             </div>
@@ -269,8 +260,8 @@
     <div class="sidebar-overlay overlay" id="sidebarOverlay"></div>
 
     <!-- javascript  -->
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/main.js"></script>
 
 </body>
 </html>

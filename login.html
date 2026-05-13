@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-EDITOR</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+        <script src="assets/js/web-editor-jquery.min.js"></script>
+
+</head>
+<body>
+<div class="login-sec vh-100 d-flex align-items-center justify-content-center">
+    <div class="container"> 
+        <div class="login-wrapper mx-auto">
+            <form id="loginForm" action="#" method="POST">
+                <!-- EMAIL -->
+                <div class="login-input-box">
+                    <label for="login-email" class="form-label login-label"> Email</label>
+                    <div class="login-input position-relative">
+                        <input id="login-email" name="email" class="input-field mt-0" type="email" placeholder="Enter your Email Address">
+                        <span class="input-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- PASSWORD -->
+                <div class="login-input-box login-pwd-box mb-3">
+                    <label for="login-password" class="form-label login-label">  Password  </label>
+                    <div class="login-input position-relative">
+                        <input id="login-password" name="password" class="input-field passwordField mt-0" type="password" placeholder="Enter your Password">
+                        <span class="login-pwd">  SHOW </span>
+                    </div>
+                </div>
+                <!-- REMEMBER + RESET -->
+                <div class="d-flex align-items-center justify-content-between mb-10">
+                    <label class="d-flex align-items-center remember-label">
+                        <input type="checkbox" class="me-2">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="reset-link">  Reset Password? </a>
+                </div>
+                <!-- BUTTON -->
+                <div class="text-center mb-4">
+                    <button type="submit" class="login-btn"> Login </button>
+                </div>
+                <!-- SIGNUP -->
+                <div class="text-center signup-text">
+                    Don't have an account?
+                    <a href="#"> Sign up now </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <!-- javascript  -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

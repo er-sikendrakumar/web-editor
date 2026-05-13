@@ -53,25 +53,59 @@
           });
 
           
-        //   Activate current page link in sidebar
-document.addEventListener("DOMContentLoaded", function () {
+    //   Activate current page link in sidebar
+    document.addEventListener("DOMContentLoaded", function () {
 
-    const navLinks = document.querySelectorAll(".side-nav-box .nav-link");
+        const navLinks = document.querySelectorAll(".side-nav-box .nav-link");
 
-    const currentPage = window.location.pathname.split("/").pop();
+        const currentPage = window.location.pathname.split("/").pop();
 
-    navLinks.forEach(link => {
+        navLinks.forEach(link => {
 
-        const linkPage = link.getAttribute("href");
+            const linkPage = link.getAttribute("href");
 
-        // Remove old active class
-        link.classList.remove("active");
+            // Remove old active class
+            link.classList.remove("active");
 
-        // Match current page
-        if (linkPage === currentPage) {
-            link.classList.add("active");
-        }
+            // Match current page
+            if (linkPage === currentPage) {
+                link.classList.add("active");
+            }
+
+        });
 
     });
 
-});
+    // Role based access control for sidebar links
+    document.getElementById("loginForm").addEventListener("submit", function(e){
+
+        e.preventDefault();
+
+        const email = document.getElementById("login-email").value.trim();
+        const password = document.getElementById("login-password").value.trim();
+
+        // Superadmin
+        if(email === "sikendrayadav@gmail.com" && password === "12345678"){
+            window.location.href = "superadmin/index.html";
+        }
+
+        // Agency
+        else if(email === "agency@one.com" && password === "12345678"){
+            window.location.href = "agency/index.html";
+        }
+
+        // Agency Staff
+        else if(email === "agencystaff@gmail.com" && password === "12345678"){
+            window.location.href = "agency-staff/index.html";
+        }
+
+        // Client
+        else if(email === "client@one.com" && password === "12345678"){
+            window.location.href = "client/index.html";
+        }
+
+        else{
+            alert("Invalid Email or Password");
+        }
+
+    });

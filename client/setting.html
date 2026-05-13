@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-EDITOR</title>
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+        <script src="../assets/js/web-editor-jquery.min.js"></script>
+
+</head>
+<body>
+    <main class="wrapper">
+        <div class="sidebar sidebar-main-box" id="sidebar">
+            <span class="close-sidebar d-lg-none txt-red">×</span>
+            <div class="sidebar-content">
+                <div class="logo">
+                <img src="../assets/images/web-dash-white.png" alt="WEB-EDITOR" class="img-fluid">
+                </div>
+                <nav class="nav side-nav-box flex-column">
+                    <a class="nav-link active" href="index.html">
+                        <i class="fa-solid fa-gauge-high me-2"></i>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a class="nav-link" href="all-sites.html">
+                        <i class="fa-solid fa-globe me-2"></i>
+                        <span>All Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="pending-registrations.html">
+                        <i class="fa-solid fa-user-clock me-2"></i>
+                        <span>Pending Registrations</span>
+                    </a>
+
+                    <a class="nav-link" href="site-builder.html">
+                        <i class="fa-solid fa-layer-group me-2"></i>
+                        <span>Site Builder</span>
+                    </a>
+
+                    <a class="nav-link" href="all-users.html">
+                        <i class="fa-solid fa-users me-2"></i>
+                        <span>All Users</span>
+                    </a>
+
+                    <a class="nav-link" href="site-agency.html">
+                        <i class="fa-solid fa-building-user me-2"></i>
+                        <span>Agency Assigned Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="site-user.html">
+                        <i class="fa-solid fa-user-check me-2"></i>
+                        <span>User Assigned Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="subscriptions.html">
+                        <i class="fa-solid fa-receipt me-2"></i>
+                        <span>Subscriptions</span>
+                    </a>
+
+                    <a class="nav-link" href="support.html">
+                        <i class="fa-solid fa-headset me-2"></i>
+                        <span>Support</span>
+                    </a> 
+                    <a class="nav-link" href="setting.html">
+                        <i class="fa-solid fa-gear me-2"></i>
+                        <span>Settings</span>
+                    </a>
+
+                    <a class="nav-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640" fill="white">
+                          <path d="M160 96C142.3 96 128 110.3 128 128C128 145.7 142.3 160 160 160L288 160L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 160L480 160C497.7 160 512 145.7 512 128C512 110.3 497.7 96 480 96L160 96z"></path>
+                        </svg>
+                        <span>Toolbox</span>
+                    </a>
+
+                </nav>
+            </div>
+            <form method="POST" action="../login.html">
+
+                <input type="hidden" name="_token" autocomplete="off">
+
+                <button type="submit" class="signout-btn">
+                    <span>Sign out</span>
+                    <i class="fa-solid fa-right-from-bracket ms-2"></i>
+                </button>
+
+            </form>
+        </div>
+
+         <!-- Main Content -->
+        <div class="main-content">
+      
+            <!-- Top Header -->
+            <div class="top-header-wrapper">
+                <div class="top-header d-flex justify-content-between align-items-center ">
+                <div class="hamburger d-flex align-items-center" id="toggleSidebar">
+                    <img src="../assets/images/humburger.png" class="img-fluid" alt="">
+                    <h2 class="ms-2">Settings</h2>
+                </div>
+
+                <!-- User Profile Section -->
+                <div class="profile-box d-flex align-items-center">
+                    <div class="text-end me-3">
+                        <h5 class="profile-title">Super Admin</h5>
+                        <p class="profile-role text-muted">Super Admin</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Main Dashboard Content -->
+            <div class="dashboard-content w-100">
+                <section class="manage-profile-sec">
+                    <!-- Flash Messages -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 m-2">
+                            <div class="profile-card card card-body">
+                                <!-- Profile Update -->
+                                <h5 class="mb-3">Update Profile</h5>
+                                <hr>
+                                <form action="" method="POST" enctype="multipart/form-data">
+                                    <input type="hidden" name="_token" value="9kL1l9My4O67fD9kMjoNa8lSTgW1quEyO9JeGfex" autocomplete="off">
+                                    <input type="hidden" name="_method" value="PUT">
+                                    <div class="row mb-3">
+                                        <!-- Name -->
+                                        <div class="col-md-6 col-xl-4">
+                                            <label class="form-label">Name <i class="fa fa-info-circle text-dark" title="Your display name shown across the application."></i></label>
+                                            <input type="text" name="name" class="form-control box-radius-50 " value="Super Admin" required>
+                                        </div>
+
+                                        <!-- Email -->
+                                        <div class="col-md-6 col-xl-4">
+                                            <label class="form-label">Email <i class="fa fa-info-circle text-dark" title="Used to sign in and receive notifications. Changing it will require re-verification."></i></label>
+                                            <div class="input-group">
+                                                <input type="email" name="email" class="form-control box-radius-50 " value="jaweed@kangaroouk.com" required>
+                                            </div>
+                                        </div>
+
+                                        <!-- Profile Photo -->
+                                        <div class="col-md-6 col-xl-4">
+                                            <label class="form-label">Profile Photo <i class="fa fa-info-circle text-dark" title="Upload a square image for best results. Max 2MB."></i></label>
+                                            <input type="file" id="profile_photo" name="profile_photo" class="form-control box-radius-50 " accept="image/*">
+                                            <div class="mt-2" id="image-preview-container" style="display:none;">
+                                                <img id="image-preview" src="#" alt="Preview" class="img-fluid rounded" style="max-height: 150px;">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-5 pt-3 mb-4">
+                                        <h5 class="mb-3">Super Admin Branding</h5>
+                                        <hr>
+                                        <div id="branding-list" class="row">
+                                            <div class="col-md-6 col-xl-4">
+                                                <label class="form-label">Admin Logo <i class="fa fa-info-circle text-dark" title="Logo shown in the sidebar and header for Super Admin. Max 4MB."></i></label>
+                                                <input type="file" name="admin_logo" class="form-control box-radius-50 " accept="image/*">
+                                            </div>
+                                            <div class="col-md-6 col-xl-4 pt-3">
+                                                <label class="form-label pt-3">Primary Color (Sidebar) <i class="fa fa-info-circle text-dark" title="Sets the sidebar background color."></i></label>
+                                                <input type="color" name="primary_color" class="form-control form-control-color box-radius-50 " value="#000000">
+                                            </div>
+                                            <div class="col-md-6 col-xl-4 pt-3">
+                                                <label class="form-label pt-3">Secondary Color (Main Background) <i class="fa fa-info-circle text-dark" title="Sets the main content background color."></i></label>
+                                                <input type="color" name="secondary_color" class="form-control form-control-color box-radius-50 " value="#ffffff">
+                                            </div>
+                                            <div class="col-md-6 col-xl-4 pt-3">
+                                                <label class="form-label pt-3">Accent Color (Buttons) <i class="fa fa-info-circle text-dark" title="Used for buttons and highlights."></i></label>
+                                                <input type="color" name="accent_color" class="form-control form-control-color box-radius-50 " value="#f89421">
+                                            </div>
+
+                                            <div class="col-md-6 col-xl-4 pt-3">
+                                                <label class="form-label pt-3">Navigation Text Color <i class="fa fa-info-circle text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="This is the color of the text on the navigation bar."></i></label>
+                                                <input type="color" name="nav_text_color" class="form-control form-control-color box-radius-50 " value="#ffffff">
+                                            </div>
+                                            <div class="col-md-6 col-xl-4 pt-3">
+                                                <label class="form-label pt-3">Navigation Text (Selected / Hovered) <i class="fa fa-info-circle text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="This is the color used for selected and hovered navigation links."></i></label>
+                                                <input type="color" name="nav_text_hover_color" class="form-control form-control-color box-radius-50 " value="#000000">
+                                            </div>
+
+                                            <div class="col-md-12 mt-4">
+                                                <label class="form-label">Support Ticket Notification Emails <i class="fa fa-info-circle text-dark" title="Comma separated list of up to 5 email addresses that will receive new support ticket notifications."></i></label>
+                                                <textarea name="support_ticket_notification_emails" class="form-control " rows="2" placeholder="alice@example.com, bob@example.com">jaweed@kangaroouk.com</textarea>
+                                                <div class="form-text">Enter up to 5 valid email addresses separated by commas. Invalid or duplicate emails will be ignored.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <button type="submit" class="btn btn-main" >Update Profile</button>
+                                </form>
+
+                                <!-- Password Change -->
+                                <div class="password-change-con mt-5">
+                                    <h5 class="mb-3">Change Password</h5>
+                                    <hr>
+                                    <form action="#" method="POST">
+                                        <input type="hidden" name="_token" value="9kL1l9My4O67fD9kMjoNa8lSTgW1quEyO9JeGfex" autocomplete="off">
+                                        <input type="hidden" name="_method" value="PUT">
+                                        <div class="row mb-3">
+                                            <div class="col-md-6 col-xl-4">
+                                                <label class="form-label">Current Password <i class="fa fa-info-circle text-dark" title="We use this to verify it&#039;s really you."></i></label>
+                                                <div class="input-group">
+                                                    <input type="password" name="current_password" class="showPassword form-control box-radius-50 " required>
+                                                    <button type="button" class="btn-show password-toggle">SHOW</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-xl-4">
+                                                <label class="form-label">New Password <i class="fa fa-info-circle text-dark" title="Choose a strong new password (min 8 characters)."></i></label>
+                                                <div class="input-group">
+                                                    <input type="password" name="password" class="showPassword form-control box-radius-50 " required>
+                                                    <button type="button" class="btn-show password-toggle">SHOW</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-xl-4">
+                                                <label class="form-label">Confirm Password <i class="fa fa-info-circle text-dark" title="Re-enter the new password to confirm."></i></label>
+                                                <div class="input-group">
+                                                    <input type="password" name="password_confirmation" class="showPassword form-control box-radius-50 " required>
+                                                    <button type="button" class="btn-show password-toggle">SHOW</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-main" >Change Password</button>
+                                    </form>
+                                </div>
+
+                                <div class="password-change-con mt-5">
+                                    <h5 class="mb-3">Admin Notices</h5>
+                                    <hr>
+
+                                    <form action="" method="POST">
+                                        <input type="hidden" name="_token" value="9kL1l9My4O67fD9kMjoNa8lSTgW1quEyO9JeGfex" autocomplete="off">
+                                        <div class="row mb-3 align-items-start">
+
+                                            <div class="col-md-4">
+                                                <label class="form-label d-block mb-3">Enable to display the notice immediately on Application</label>
+                                                <div class="form-check form-switch d-flex align-items-center gap-2 mb-0">
+                                                    <input class="form-check-input mt-0" type="checkbox" role="switch" id="admin_notice_active" name="admin_notice_active" value="1">
+                                                    <label class="form-check-label" for="admin_notice_active">
+                                                        Active
+                                                        <i class="fa fa-info-circle text-dark ms-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Toggle to show or hide the notice banner across the application."></i>
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-main" >
+                                                    Save Notice Settings
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="sidebar-overlay overlay" id="sidebarOverlay"></div>
+
+    <!-- javascript  -->
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

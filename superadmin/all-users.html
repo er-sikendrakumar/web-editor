@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-EDITOR</title>
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+        <script src="../assets/js/web-editor-jquery.min.js"></script>
+
+</head>
+<body>
+    <main class="wrapper">
+        <div class="sidebar sidebar-main-box" id="sidebar">
+            <span class="close-sidebar d-lg-none txt-red">×</span>
+            <div class="sidebar-content">
+                <div class="logo">
+                <img src="../assets/images/web-dash-white.png" alt="WEB-EDITOR" class="img-fluid">
+                </div>
+                <nav class="nav side-nav-box flex-column">
+                    <a class="nav-link active" href="index.html">
+                        <i class="fa-solid fa-gauge-high me-2"></i>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a class="nav-link" href="all-sites.html">
+                        <i class="fa-solid fa-globe me-2"></i>
+                        <span>All Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="pending-registrations.html">
+                        <i class="fa-solid fa-user-clock me-2"></i>
+                        <span>Pending Registrations</span>
+                    </a>
+
+                    <a class="nav-link" href="site-builder.html">
+                        <i class="fa-solid fa-layer-group me-2"></i>
+                        <span>Site Builder</span>
+                    </a>
+
+                    <a class="nav-link" href="all-users.html">
+                        <i class="fa-solid fa-users me-2"></i>
+                        <span>All Users</span>
+                    </a>
+
+                    <a class="nav-link" href="site-agency.html">
+                        <i class="fa-solid fa-building-user me-2"></i>
+                        <span>Agency Assigned Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="site-user.html">
+                        <i class="fa-solid fa-user-check me-2"></i>
+                        <span>User Assigned Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="subscriptions.html">
+                        <i class="fa-solid fa-receipt me-2"></i>
+                        <span>Subscriptions</span>
+                    </a>
+
+                    <a class="nav-link" href="support.html">
+                        <i class="fa-solid fa-headset me-2"></i>
+                        <span>Support</span>
+                    </a> 
+                    <a class="nav-link" href="setting.html">
+                        <i class="fa-solid fa-gear me-2"></i>
+                        <span>Settings</span>
+                    </a>
+
+                    <a class="nav-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640" fill="white">
+                          <path d="M160 96C142.3 96 128 110.3 128 128C128 145.7 142.3 160 160 160L288 160L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 160L480 160C497.7 160 512 145.7 512 128C512 110.3 497.7 96 480 96L160 96z"></path>
+                        </svg>
+                        <span>Toolbox</span>
+                    </a>
+
+                </nav>
+            </div>
+           <form method="POST" action="../login.html">
+                <input type="hidden" name="_token" autocomplete="off">
+                <button type="submit" class="signout-btn">
+                    <span>Sign out</span>
+                    <i class="fa-solid fa-right-from-bracket ms-2"></i>
+                </button>
+            </form>
+        </div>
+
+         <!-- Main Content -->
+        <div class="main-content">
+      
+            <!-- Top Header -->
+            <div class="top-header-wrapper">
+                <div class="top-header d-flex justify-content-between align-items-center ">
+                <div class="hamburger d-flex align-items-center" id="toggleSidebar">
+                    <img src="../assets/images/humburger.png" class="img-fluid" alt="">
+                    <h2>All Users</h2>
+                </div>
+
+                <!-- User Profile Section -->
+                <div class="profile-box d-flex align-items-center">
+                    <div class="text-end me-3">
+                        <h5 class="profile-title">Super Admin</h5>
+                        <p class="profile-role text-muted">Super Admin</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Main Dashboard Content -->
+            <div class="dashboard-content w-100">
+                <div class="">
+                    <!--<h2 class="mb-4 main-title">List of User</h2>-->
+                    <div class="search-global user-search d-flex justify-content-between align-items-end gap-3 flex-wrap">
+                        <div class="search-bar sites_search_bar">
+                            <input type="text" id="users-search" name="search" value="" placeholder="Search by Name, Email, Phone">
+                            <i class="fa-solid fa-magnifying-glass position-absolute websitelist-theme-color"></i>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 flex-wrap">
+                            <div>
+                                <label for="users-role-filter" class="form-label mb-0 me-2">Role</label>
+                                <select id="users-role-filter" class="form-select form-select-sm" style="min-width: 180px;">
+                                    <option value="" selected>All Roles</option>
+                                    <option value="Super Admin">
+                                        Super Admin
+                                    </option>
+                                    <option value="Agency Admin">
+                                        Agency Admin
+                                    </option>
+                                    <option value="Agency User">
+                                        Agency Team
+                                    </option>
+                                    <option value="User">
+                                        Client
+                                    </option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="users-status-filter" class="form-label mb-0 me-2">Status</label>
+                                <select id="users-status-filter" class="form-select form-select-sm" style="min-width: 180px;">
+                                    <option value="" selected>All Status</option>
+                                    <option value="active">Active</option>
+                                    <option value="inactive">Inactive</option>
+                                </select>
+                            </div>
+                        </div>
+                        <a href="create-user.html" class="btn btn-primary line-height-23">Add User</a>
+                    </div>
+
+
+                    <div class="table-responsive ">
+                        <table class="table recent-user-table create-table web-list-table align-middle">
+                            <thead>
+                                <tr class="web-list-head create-user-head">
+                                    <th class="bg-orange min-150">S.no</th>
+                                    <th class="bg-orange min-150">Name</th>
+                                    <th class="bg-orange min-150">Email</th>
+                                    <th class="bg-orange">Role</th>
+                                    <th class="bg-orange">Status</th>
+                                    <th class="bg-orange min-150">Created At</th>
+                                    <th class="bg-orange">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="users-tbody">
+                                <tr>
+                                    <td>1</td>
+                                    <td>Staff Test</td>
+                                    <td>staff@one.com</td>
+                                    <td>
+                                        Agency Team
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-success rounded-pill "> Active </span>
+                                    </td>
+                                    <td>21 Apr 2026 14:16</td>
+                                    <td class="table-icons-wl">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <a href="edit-user.html" class="btn btn-sm btn-outline-primary">Edit</a>
+                                            <form action="" method="POST" onsubmit="return confirm('Are you sure you want to delete this user?');">
+                                                <input type="hidden" name="_token" value="AKJb9ZghqqKUpuHRitHgmTFtQerfEuQwjht8x6ml" autocomplete="off">
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>agency</td>
+                                    <td>test@agencystaff.com</td>
+                                    <td>
+                                        Agency Team
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-success rounded-pill "> Active </span>
+                                    </td>
+                                    <td>13 Apr 2026 23:19</td>
+                                    <td class="table-icons-wl">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <a href="edit-user.html" class="btn btn-sm btn-outline-primary">Edit</a>
+                                            <form action="" method="POST" onsubmit="return confirm('Are you sure you want to delete this user?');">
+                                                <input type="hidden" name="_token" value="AKJb9ZghqqKUpuHRitHgmTFtQerfEuQwjht8x6ml" autocomplete="off">
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Test Client</td>
+                                    <td>client@one.com</td>
+                                    <td>
+                                        Client
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-success rounded-pill "> Active </span>
+                                    </td>
+                                    <td>30 Mar 2026 14:43</td>
+                                    <td class="table-icons-wl">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <a href="edit-user.html" class="btn btn-sm btn-outline-primary">Edit</a>
+                                            <form action="" method="POST" onsubmit="return confirm('Are you sure you want to delete this user?');">
+                                                <input type="hidden" name="_token" value="AKJb9ZghqqKUpuHRitHgmTFtQerfEuQwjht8x6ml" autocomplete="off">
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Agency Two</td>
+                                    <td>agency@two.com</td>
+                                    <td>
+                                        Agency Admin
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-success rounded-pill "> Active </span>
+                                    </td>
+                                    <td>30 Mar 2026 02:07</td>
+                                    <td class="table-icons-wl">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <a href="edit-user.html" class="btn btn-sm btn-outline-primary">Edit</a>
+                                            <form action="" method="POST" onsubmit="return confirm('Are you sure you want to delete this user?');">
+                                                <input type="hidden" name="_token" value="AKJb9ZghqqKUpuHRitHgmTFtQerfEuQwjht8x6ml" autocomplete="off">
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Agency</td>
+                                    <td>agency@one.com</td>
+                                    <td>
+                                        Agency Admin
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-success rounded-pill "> Active </span>
+                                    </td>
+                                    <td>30 Mar 2026 01:51</td>
+                                    <td class="table-icons-wl">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <a href="edit-user.html" class="btn btn-sm btn-outline-primary">Edit</a>
+                                            <form action="" method="POST" onsubmit="return confirm('Are you sure you want to delete this user?');">
+                                                <input type="hidden" name="_token" value="AKJb9ZghqqKUpuHRitHgmTFtQerfEuQwjht8x6ml" autocomplete="off">
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Super Admin</td>
+                                    <td>jaweed@kangaroouk.com</td>
+                                    <td>
+                                        Super Admin
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-success rounded-pill "> Active </span>
+                                    </td>
+                                    <td>30 Mar 2026 01:48</td>
+                                    <td class="table-icons-wl">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <a href="edit-user.html" class="btn btn-sm btn-outline-primary">Edit</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="pagination-wrapper" id="users-pagination-wrapper">
+                        <div id="users-results">
+                            <div class="results-text f-18">1 to 6 of 6 Results</div>
+                        </div>
+                        <div id="users-pagination">
+                            <nav class="custom-pagination">
+                                <ul class="pagination mb-0">
+                                    <li class="page-item disabled"><span class="page-link">1</span></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="sidebar-overlay overlay" id="sidebarOverlay"></div>
+
+    <!-- javascript  -->
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
