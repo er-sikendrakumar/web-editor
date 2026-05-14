@@ -58,17 +58,15 @@
 
         const navLinks = document.querySelectorAll(".side-nav-box .nav-link");
 
-        const currentPage = window.location.pathname.split("/").pop();
+        const currentPath = window.location.pathname;
 
         navLinks.forEach(link => {
 
-            const linkPage = link.getAttribute("href");
+            const linkHref = link.getAttribute("href");
 
-            // Remove old active class
             link.classList.remove("active");
 
-            // Match current page
-            if (linkPage === currentPage) {
+            if (currentPath.includes(linkHref.replace(".html", ""))) {
                 link.classList.add("active");
             }
 

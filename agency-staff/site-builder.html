@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB-EDITOR</title>
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+     <link rel="stylesheet" href="../assets/css/web-editor-all.min.css">
+     <link rel="stylesheet" href="../assets/css/web-editor-icon.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
-        <script src="../assets/js/web-editor-jquery.min.js"></script>
-
+    <script src="../assets/js/web-editor-jquery.min.js"></script>
 </head>
 <body>
     <main class="wrapper">
@@ -32,34 +31,14 @@
                         <span>All Sites</span>
                     </a>
 
-                    <a class="nav-link" href="pending-registrations.html">
-                        <i class="fa-solid fa-user-clock me-2"></i>
-                        <span>Pending Registrations</span>
-                    </a>
-
                     <a class="nav-link" href="site-builder.html">
                         <i class="fa-solid fa-layer-group me-2"></i>
                         <span>Site Builder</span>
                     </a>
 
-                    <a class="nav-link" href="all-users.html">
-                        <i class="fa-solid fa-users me-2"></i>
-                        <span>All Users</span>
-                    </a>
-
-                    <a class="nav-link" href="site-agency.html">
-                        <i class="fa-solid fa-building-user me-2"></i>
-                        <span>Agency Assigned Sites</span>
-                    </a>
-
-                    <a class="nav-link" href="site-user.html">
-                        <i class="fa-solid fa-user-check me-2"></i>
-                        <span>User Assigned Sites</span>
-                    </a>
-
-                    <a class="nav-link" href="subscriptions.html">
-                        <i class="fa-solid fa-receipt me-2"></i>
-                        <span>Subscriptions</span>
+                    <a class="nav-link" href="clients.html">
+                        <i class="fa-solid fa-user-tie me-2"></i>
+                        <span>Clients</span>
                     </a>
 
                     <a class="nav-link" href="support.html">
@@ -103,8 +82,8 @@
                 <!-- User Profile Section -->
                 <div class="profile-box d-flex align-items-center">
                     <div class="text-end me-3">
-                        <h5 class="profile-title">Super Admin</h5>
-                        <p class="profile-role text-muted">Super Admin</p>
+                        <h5 class="profile-title">Agency</h5>
+                        <p class="profile-role text-muted">Agency User</p>
                     </div>
                 </div>
             </div>
@@ -129,36 +108,6 @@
                                             </div>
                                         </div>
                                         <h3>Start with a template</h3>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <!-- Get a head start with AI -->
-                            <div class="col-md-4 col-sm-12">
-                                <a href="#" class="text-decoration-none d-block coming-soon-link" data-title="Get a head start with AI">
-                                    <div class="box-item" role="button">
-                                        <div class="box-icon">
-                                            <div class="box-icon-cont cont2">
-                                                <i class="bi bi-stars"></i>
-                                            </div>
-                                        </div>
-                                        <h3>Get a head start with AI</h3>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <!-- Collect content first -->
-                            <div class="col-md-4 col-sm-12">
-                                <a href="#" class="text-decoration-none d-block coming-soon-link" data-title="Collect content first">
-                                    <div class="box-item justify-content-between" role="button">
-                                        <div class="d-flex align-items-center gap-3">
-                                            <div class="box-icon">
-                                                <div class="box-icon-cont cont3">
-                                                    <i class="bi bi-folder"></i>
-                                                </div>
-                                            </div>
-                                            <h3>Collect content first</h3>
-                                        </div>
                                     </div>
                                 </a>
                             </div>
@@ -338,7 +287,6 @@
                                     </ul>
                                 </div>
 
-                                <a href="#" class="create-user-btn sync-btn btn-orange" id="syncTemplatesBtn">Sync Templates</a>
                             </div>
 
                         </div>
@@ -810,7 +758,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body text-center">
-                            <img id="templatePreviewImage" src="" alt="Template Preview" class="img-fluid" style="max-height:70vh; object-fit:contain;">
+                            <img id="templatePreviewImage" src="" alt="Template Preview" class="img-fluid object-fit-contain" style="max-height:70vh;">
                             <p class="mt-2 mb-0">
                                 <a id="templatePreviewLink" href="#" target="_blank" rel="noopener noreferrer"></a>
                             </p>

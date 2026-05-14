@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-EDITOR</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+        <script src="assets/js/web-editor-jquery.min.js"></script>
+
+</head>
+<body>
+<div class="login-sec d-flex align-items-center">
+    <div class="container justify-content-center ">
+        <div class="login">
+            <form action="" method="POST">
+                <input type="hidden" name="_token" value="WkMAftaL8RFrI3B7rw8AJANOXNblQNYwTNc4CgML" autocomplete="off">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="login-input-box mb-4">
+                            <label for="name">Name</label>
+                            <div class="login-input">
+                                <input class="input-field mt-0 registration-input" id="name" name="name" type="text" value="" placeholder="Enter your Full Name" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="login-input-box mb-4 ">
+                            <label for="email">Email</label>
+                            <div class="login-input reg-pwd position-relative">
+                                <span class="icon lh-sm"><i class="fa-solid fa-envelope position-absolute"></i></span>
+                                <input class="input-field mt-0 registration-input" id="email" name="email" type="email" value="" placeholder="Enter your Email Address" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="login-input-box mb-4">
+                            <label for="password">Password</label>
+                            <div class="login-input">
+                                <input class="input-field passwordField mt-0 registration-input" id="password" type="password" name="password" placeholder="Enter your Password" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="login-input-box mb-4">
+                            <label for="password_confirmation">Confirm Password</label>
+                            <div class="login-input">
+                                <input class="input-field passwordField mt-0 registration-input" id="password_confirmation" type="password" name="password_confirmation" placeholder="Confirm your Password" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                        <div class="login-input-box mb-4">
+                            <label for="phone_number">Phone Number</label>
+                            <div class="login-input">
+                                <input class="input-field mt-0 registration-input" id="phone_number" type="text" name="phone_number" placeholder="Enter your Phone Number" value="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                        <div class="login-input-box mb-4">
+                            <label for="website_url">Your Website Address</label>
+                            <div class="login-input">
+                                <input class="input-field mt-0 registration-input" id="website_url" type="url" name="website_url" placeholder="https://example.com" value="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                        <div class="login-input-box mb-4">
+                            <label for="office_phone">Your Office Phone Number</label>
+                            <div class="login-input">
+                                <input class="input-field mt-0 registration-input" id="office_phone" type="text" name="office_phone" placeholder="Enter your Office Phone Number" value="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                        <div class="login-input-box mb-4">
+                            <label for="agency_name">Agency Name</label>
+                            <div class="login-input">
+                                <input class="input-field mt-0 registration-input" id="agency_name" type="text" name="agency_name" placeholder="Enter your Agency Name" value="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                        <div class="login-input-box mb-4">
+                            <label for="address">Address</label>
+                            <div class="login-input">
+                                <input class="input-field mt-0 registration-input" id="address" type="text" name="address" placeholder="Enter your Address" value="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12">
+                        <div class="login-input-box mb-4">
+                            <label for="referral_source">How did you find us?</label>
+                            <div class="login-input">
+                                <input class="input-field mt-0 registration-input" id="referral_source" type="text" name="referral_source" placeholder="Google, Referral, Social Media, etc." value="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="login-input-box mb-4">
+                                <div class="g-recaptcha" data-sitekey="6LfPHqYrAAAAAIxqd2pHKozr6SLbrk5NkDzqeotA"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="remember-forgot mt-2 d-flex flex-column flex-md-row justify-content-between align-items-center">
+                        <button type="submit" class="register-btn text-decoration-none text-white fw-medium">Register</button>
+                        <a href="login.html" class="f-16 fw-normal text-black">
+                                Already have an account? <span class="fw-bold">Login</span>
+                            </a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+    <!-- javascript  -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

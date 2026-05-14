@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB-EDITOR</title>
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+     <link rel="stylesheet" href="../assets/css/web-editor-all.min.css">
+     <link rel="stylesheet" href="../assets/css/web-editor-icon.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
-        <script src="../assets/js/web-editor-jquery.min.js"></script>
-
+    <script src="../assets/js/web-editor-jquery.min.js"></script>
 </head>
 <body>
     <main class="wrapper">
@@ -32,34 +31,14 @@
                         <span>All Sites</span>
                     </a>
 
-                    <a class="nav-link" href="pending-registrations.html">
-                        <i class="fa-solid fa-user-clock me-2"></i>
-                        <span>Pending Registrations</span>
-                    </a>
-
                     <a class="nav-link" href="site-builder.html">
                         <i class="fa-solid fa-layer-group me-2"></i>
                         <span>Site Builder</span>
                     </a>
 
-                    <a class="nav-link" href="all-users.html">
-                        <i class="fa-solid fa-users me-2"></i>
-                        <span>All Users</span>
-                    </a>
-
-                    <a class="nav-link" href="site-agency.html">
-                        <i class="fa-solid fa-building-user me-2"></i>
-                        <span>Agency Assigned Sites</span>
-                    </a>
-
-                    <a class="nav-link" href="site-user.html">
-                        <i class="fa-solid fa-user-check me-2"></i>
-                        <span>User Assigned Sites</span>
-                    </a>
-
-                    <a class="nav-link" href="subscriptions.html">
-                        <i class="fa-solid fa-receipt me-2"></i>
-                        <span>Subscriptions</span>
+                    <a class="nav-link" href="clients.html">
+                        <i class="fa-solid fa-user-tie me-2"></i>
+                        <span>Clients</span>
                     </a>
 
                     <a class="nav-link" href="support.html">
@@ -97,14 +76,14 @@
                 <div class="top-header d-flex justify-content-between align-items-center ">
                 <div class="hamburger d-flex align-items-center" id="toggleSidebar">
                     <img src="../assets/images/humburger.png" class="img-fluid" alt="">
-                    <h2>Agency Assigned Sites</h2>
+                    <h2>Clients</h2>
                 </div>
 
                 <!-- User Profile Section -->
                 <div class="profile-box d-flex align-items-center">
                     <div class="text-end me-3">
-                        <h5 class="profile-title">Super Admin</h5>
-                        <p class="profile-role text-muted">Super Admin</p>
+                        <h5 class="profile-title">Agency</h5>
+                        <p class="profile-role text-muted">Agency User</p>
                     </div>
                 </div>
             </div>
@@ -112,56 +91,52 @@
 
             <!-- Main Dashboard Content -->
             <div class="dashboard-content w-100">
-                <div class="content-box-details">
-                    <div class="">
+                <div class="web-list-container">
+                    <div class="d-flex justify-content-end align-items-center mb-3">
+                        <a href="create-client.html" class="btn btn-primary line-height-23">Add Client</a>
+                    </div>
 
-                    <form method="get" class="search-global user-search d-flex justify-content-between align-items-center">
-                        <div class="search-bar position-relative d-flex align-items-center gap-2">
-                            <input type="text" name="search" value="" placeholder="Domain, site name or agency name/email">
-                            <i class="fa-solid fa-magnifying-glass position-absolute websitelist-theme-color"></i>
-                        </div>
+                    <form method="get" class="mb-3 d-flex align-items-center gap-2 top_search_form">
+                        <input type="text" name="search" class="form-control" placeholder="Search name, email, phone" value="">
+                        <button class="btn btn-outline-secondary border-outline border-outline" type="submit">Search</button>
                     </form>
 
-                                        
-                    <div class="table-responsive ">
-                        <table class="table recent-user-table create-table web-list-table align-middle">
+                    <div class="table-responsive">
+                        <table class="table table-medium table-striped align-middle">
                             <thead>
-                            <tr class="web-list-head create-user-head">
-                                <th class="bg-orange min-150">S.no</th>
-                                <th class="bg-orange min-150">Agency</th>
-                                <th class="bg-orange min-150">Email</th>
-                                <th class="bg-orange min-150">No of Sites Associated</th>
-                                <th class="bg-orange">Actions</th>
-                            </tr>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Active</th>
+                                    <th>Created</th>
+                                    <th>Actions</th>
+                                </tr>
                             </thead>
                             <tbody>
-
                                 <tr>
                                     <td>1</td>
-                                    <td>Agency</td>
-                                    <td>agency@one.com</td>
-                                    <td>2</td>
-                                    <td class="table-icons-wl d-flex align-items-center gap-2">
-                                        <a href="site-agency-edit.html" title="Edit"><i class="fa-solid fa-pen ps-2 txt-orange"></i></a>
+                                    <td>Test Client</td>
+                                    <td>client@one.com</td>
+                                    <td>07123456789</td>
+                                    <td>
+                                        <span class="badge bg-success">Active</span>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Agency Two</td>
-                                    <td>agency@two.com</td>
-                                    <td>0</td>
-                                    <td class="table-icons-wl d-flex align-items-center gap-2">
-                                        <a href="site-agency-edit.html" title="Edit"><i class="fa-solid fa-pen ps-2 txt-orange"></i></a>
+                                    <td>2026-03-30</td>
+                                    <td>
+                                        <a href="edit-clients.html" class="btn btn-sm btn-outline-primary">Edit</a>
+                                        <form action="" method="post" class="d-inline" onsubmit="return confirm('Delete this client?');">
+                                            <input type="hidden" name="_token" value="yxPD97TVvn36tDogKKR5uEV7em83hyYEUXto3Ojw" autocomplete="off">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <button class="btn btn-sm btn-outline-danger" type="submit">Delete</button>
+                                        </form>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <!-- Pagination -->
-                    <nav class="custom-pagination float-end">
-                    
-                    </nav>
-                </div>
+
                 </div>
             </div>
 

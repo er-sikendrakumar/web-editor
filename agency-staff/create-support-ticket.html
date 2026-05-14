@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-EDITOR</title>
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+     <link rel="stylesheet" href="../assets/css/web-editor-all.min.css">
+     <link rel="stylesheet" href="../assets/css/web-editor-icon.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <script src="../assets/js/web-editor-jquery.min.js"></script>
+</head>
+<body>
+    <main class="wrapper">
+        <div class="sidebar sidebar-main-box" id="sidebar">
+            <span class="close-sidebar d-lg-none txt-red">×</span>
+            <div class="sidebar-content">
+                <div class="logo">
+                <img src="../assets/images/web-dash-white.png" alt="WEB-EDITOR" class="img-fluid">
+                </div>
+                <nav class="nav side-nav-box flex-column">
+                    <a class="nav-link active" href="index.html">
+                        <i class="fa-solid fa-gauge-high me-2"></i>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a class="nav-link" href="all-sites.html">
+                        <i class="fa-solid fa-globe me-2"></i>
+                        <span>All Sites</span>
+                    </a>
+
+                    <a class="nav-link" href="site-builder.html">
+                        <i class="fa-solid fa-layer-group me-2"></i>
+                        <span>Site Builder</span>
+                    </a>
+
+                    <a class="nav-link" href="clients.html">
+                        <i class="fa-solid fa-user-tie me-2"></i>
+                        <span>Clients</span>
+                    </a>
+
+                    <a class="nav-link" href="support.html">
+                        <i class="fa-solid fa-headset me-2"></i>
+                        <span>Support</span>
+                    </a> 
+                    <a class="nav-link" href="setting.html">
+                        <i class="fa-solid fa-gear me-2"></i>
+                        <span>Settings</span>
+                    </a>
+
+                    <a class="nav-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640" fill="white">
+                          <path d="M160 96C142.3 96 128 110.3 128 128C128 145.7 142.3 160 160 160L288 160L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 160L480 160C497.7 160 512 145.7 512 128C512 110.3 497.7 96 480 96L160 96z"></path>
+                        </svg>
+                        <span>Toolbox</span>
+                    </a>
+
+                </nav>
+            </div>
+           <form method="POST" action="../login.html">
+                <input type="hidden" name="_token" autocomplete="off">
+                <button type="submit" class="signout-btn">
+                    <span>Sign out</span>
+                    <i class="fa-solid fa-right-from-bracket ms-2"></i>
+                </button>
+            </form>
+        </div>
+
+         <!-- Main Content -->
+        <div class="main-content">
+      
+            <!-- Top Header -->
+            <div class="top-header-wrapper">
+                <div class="top-header d-flex justify-content-between align-items-center ">
+                <div class="hamburger d-flex align-items-center" id="toggleSidebar">
+                    <img src="../assets/images/humburger.png" class="img-fluid" alt="">
+                    <h2>Support > New Support Ticket</h2>
+                </div>
+
+                <!-- User Profile Section -->
+                <div class="profile-box d-flex align-items-center">
+                    <div class="text-end me-3">
+                        <h5 class="profile-title">Agency</h5>
+                        <p class="profile-role text-muted">Agency User</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Main Dashboard Content -->
+            <div class="dashboard-content">
+                <div class="container-fluid">
+                    <div class="card p-4">
+                        <form action="" method="POST" enctype="multipart/form-data" x-data="supportForm()">
+                            <input type="hidden" name="_token" value="BlDrOs5NTBsab1G3wlx8wNn7odexyHGMSos2UTNO" autocomplete="off">
+                            <div class="mb-3">
+                                <label class="form-label">Select Site (optional)</label>
+                                <select name="site_id" class="form-control">
+                                    <option value="">-- None / Not specific to a site --</option>
+                                    <option value="840">
+                                        publishtest.multiscreensite.com
+                                    </option>
+                                    <option value="839">
+                                        testabc17e19648.multiscreensite.com
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Subject</label>
+                                <input type="text" name="subject" value="" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Description</label>
+                                <textarea name="description" rows="5" class="form-control border-dark" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Images (optional)</label>
+                                <input type="file" name="images[]" class="form-control box-radius-50" multiple accept="image/*" @change="preview($event)">
+                                <small class="text-muted">You can upload multiple images. Max size 10MB each.</small>
+                            </div>
+
+                            <div class="row" x-show="files.length" x-cloak>
+                                <template x-for="(file, idx) in files" :key="idx">
+                                    <div class="col-md-3 mb-3">
+                                        <div class="border rounded p-2 text-center">
+                                            <img :src="file.url" alt="Preview" class="img-fluid" x-show="file.isImage">
+                                            <div class="small mt-2" x-text="file.name"></div>
+                                            <div class="small text-muted" x-text="file.sizeText"></div>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+
+                            <div class="d-flex justify-content-end gap-2">
+                                <a href="support.html" class="btn btn-outline-secondary border-outline">Cancel</a>
+                                <button type="submit" class="btn btn-primary">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="sidebar-overlay overlay" id="sidebarOverlay"></div>
+    <script>
+        function supportForm() {
+            return {
+                files: [],
+                preview(e) {
+                    this.files = [];
+                    const input = e.target;
+                    if (!input.files) { return; }
+                    Array.from(input.files).forEach(f => {
+                        const isImage = f.type.startsWith('image/');
+                        const sizeText = (f.size / (1024*1024)).toFixed(2) + ' MB';
+                        const fileObj = { name: f.name, isImage, sizeText, url: '' };
+                        if (isImage) {
+                            const reader = new FileReader();
+                            reader.onload = (ev) => { fileObj.url = ev.target.result; this.$root && this.$root.dispatchEvent(new Event('input')); };
+                            reader.readAsDataURL(f);
+                        }
+                        this.files.push(fileObj);
+                    });
+                }
+            }
+        }
+    </script>
+    <!-- javascript  -->
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,25 +1,4 @@
 /* New custom styles Start */
-/* Padding Top */
-.pt-10 { padding-top: 10px !important; }
-.pt-15 { padding-top: 15px !important; }
-.pt-20 { padding-top: 20px !important; }
-
-/* Padding Bottom */
-.pb-10 { padding-bottom: 10px !important; }
-.pb-15 { padding-bottom: 15px !important; }
-.pb-20 { padding-bottom: 20px !important; }
-
-/* Margin Top */
-.mt-10 { margin-top: 10px !important; }
-.mt-15 { margin-top: 15px !important; }
-.mt-20 { margin-top: 20px !important; }
-
-/* Margin Bottom */
-.mb-10 { margin-bottom: 10px !important; }
-.mb-15 { margin-bottom: 15px !important; }
-.mb-20 { margin-bottom: 20px !important; }
-.radius-50 { border-radius: 50px !important; }
-
 main{
     display: flex;
     flex-direction: row;
@@ -293,6 +272,128 @@ main{
     border-radius: 50px;
     background: #e5e7eb !important;
     color: #555 !important;
+}
+/* ticket */
+.support-tabs .nav-link {
+    color: #6c757d;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid #aaa;
+    border-radius: 50px;
+    margin: 10px 0px 0px 10px;
+    line-height: 24px;
+    font-size: 16px;
+    height: 43px;
+}
+.support-tabs .nav-link:hover {
+    color: #495057;
+    border-bottom-color: #dee2e6;
+}
+.support-tabs .nav-link.active {
+    color: #6f42c1;
+    border-bottom-color: #f8f9fa;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin: 10px 0px 0px 10px;
+}
+.ticket-header-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+.ticket-info-badge {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+.conversation-item {
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    margin-bottom: 1rem;
+    border-left: 4px solid #6f42c1;
+}
+.activity-item {
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+.activity-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+.attachment-card {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+.attachment-card:hover {
+    border-color: #6f42c1;
+    box-shadow: 0 4px 12px rgba(111, 66, 193, 0.2);
+    transform: translateY(-4px);
+}
+.tab-content {
+    min-height: 240px;
+    height: 240px;
+    overflow-y: auto;
+}
+.ticketTitle{
+    font-weight: bold;
+    color: white;
+}
+.ticket-header-card * {
+    color: black !important;
+    border-radius: 10px;
+}
+.tab-content .tab-pane.fade.show.active {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 30px;
+}
+.dashsupport-ticket .card-body{
+    min-height: 175px;
+}
+.card-pagination {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.login {
+    background-color: #fff;
+    color: #000;
+    margin: auto;
+    max-width: 750px;
+    height: 100%;
+    border-radius: 15px;
+    padding: 55px 65px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.login-input-box label {
+    font-size: 18px;
+    color: #515151;
+    font-weight: 500;
+}
+.forget-pwd-wrapper{border: 3px solid #000;}
+.label-list-item{
+    position: absolute;
+    inset: 0px 0px auto auto;
+    margin: 0px;
+    transform: translate(0px, 36px);
 }
 
 /* New custom styles End */
