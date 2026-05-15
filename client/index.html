@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
-    <script src="../assets/js/web-editor-jquery.min.js"></script>
+        <script src="../assets/js/web-editor-jquery.min.js"></script>
+
 </head>
 <body>
     <main class="wrapper">
@@ -29,36 +30,6 @@
                     <a class="nav-link" href="all-sites.html">
                         <i class="fa-solid fa-globe me-2"></i>
                         <span>All Sites</span>
-                    </a>
-
-                    <a class="nav-link" href="pending-registrations.html">
-                        <i class="fa-solid fa-user-clock me-2"></i>
-                        <span>Pending Registrations</span>
-                    </a>
-
-                    <a class="nav-link" href="site-builder.html">
-                        <i class="fa-solid fa-layer-group me-2"></i>
-                        <span>Site Builder</span>
-                    </a>
-
-                    <a class="nav-link" href="all-users.html">
-                        <i class="fa-solid fa-users me-2"></i>
-                        <span>All Users</span>
-                    </a>
-
-                    <a class="nav-link" href="site-agency.html">
-                        <i class="fa-solid fa-building-user me-2"></i>
-                        <span>Agency Assigned Sites</span>
-                    </a>
-
-                    <a class="nav-link" href="site-user.html">
-                        <i class="fa-solid fa-user-check me-2"></i>
-                        <span>User Assigned Sites</span>
-                    </a>
-
-                    <a class="nav-link" href="subscriptions.html">
-                        <i class="fa-solid fa-receipt me-2"></i>
-                        <span>Subscriptions</span>
                     </a>
 
                     <a class="nav-link" href="support.html">
@@ -102,8 +73,8 @@
                 <!-- User Profile Section -->
                 <div class="profile-box d-flex align-items-center">
                     <div class="text-end me-3">
-                        <h5 class="profile-title">Super Admin</h5>
-                        <p class="profile-role text-muted">Super Admin</p>
+                        <h5 class="profile-title">Test Client</h5>
+                        <p class="profile-role text-muted"> User</p>
                     </div>
                 </div>
             </div>
@@ -111,200 +82,95 @@
 
             <!-- Main Dashboard Content -->
             <div class="dashboard-content">
-                <div class="">
-
+                <div class="inner-content-box">
                     <!-- Stat Cards -->
-                    <div class="row g-3">
-
+                    <div class="row">
                         <div class="col-md-6 col-lg-6 col-xl-3">
-                                <a href="all-sites.html"><div class="card-stat card-purple">
+                            <a href="all-sites.html">
+                                <div class="card-stat card-purple">
                                     <div class="card-content dash-card">
-                                        <p>Total Sites</p>
-                                        <h3 class="stat-count">870</h3>
+                                        <p>My Sites</p>
+                                        <h3 class="stat-count">1</h3>
                                     </div>
                                     <div class="dash-card-img">
-                                        <i class="fa-solid fa-globe"></i>
+                                        <i class="fa-solid fa-calendar"></i>
                                     </div>
-                                </div></a>
-                        </div>
-
-                        <div class="col-md-6 col-lg-6 col-xl-3">
-                            <a href="all-users.html"><div class="card-stat card-teal">
-                                <div class="card-content dash-card">
-                                    <p>Active Users</p>
-                                    <h3 class="stat-count">6</h3>
                                 </div>
-                                <div class="dash-card-img">
-                                    <i class="fa-solid fa-users"></i>
-                                </div>
-                            </div></a>
-
+                            </a>
                         </div>
                         <div class="col-md-6 col-lg-6 col-xl-3">
-                            <a href="all-users.html"><div class="card-stat card-orange">
+                            <div class="card-stat card-teal">
                                 <div class="card-content dash-card">
-                                    <p>No. Agencies</p>
-                                    <h3 class="stat-count">2</h3>
+                                    <p>Published Sites</p>
+                                    <h3 class="stat-count">0</h3>
                                 </div>
                                 <div class="dash-card-img">
-                                    <i class="fa-solid fa-user-tie"></i>
-                                </div>
-                            </div></a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-xl-3">
-                            <a href="all-sites.html"><div class="card-stat card-red">
-                                <div class="card-content dash-card">
-                                    <p class="">Published Sites</p>
-                                    <h3 class="stat-count">252</h3>
-                                </div>
-                                <div class="dash-card-img">
-                                    <i class="fa-solid fa-check-circle"></i>
-                                </div>
-                            </div></a>
-                        </div>
-                    </div>
-
-                    <!-- Charts Role (Pie) -->
-                    <div class="row mt-4 g-3">
-                        <div class="col-12 col-xl-6 col-md-6">
-                            <div class="card h-100">
-                                <div class="card-header bg-white">
-                                    <h5 class="mb-0">Users by Role</h5>
-                                </div>
-                                <div class="card-body card-body-role">
-                                    <canvas id="usersByRoleChart" width="348" height="348" style="display: block; box-sizing: border-box; height: 348px; width: 348px;"></canvas>
+                                    <i class="fa-solid fa-calendar"></i>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Published/Unpublished-->
-                        <div class="col-12 col-xl-6 col-md-6">
-                            <div class="card h-100">
-                                <div class="card-header bg-white">
-                                    <h5 class="mb-0">Publish Activity This Month</h5>
-                                    <small class="text-muted">Newly published vs. Unpublished</small>
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="card-stat card-orange">
+                                <div class="card-content dash-card">
+                                    <p>Unpublished Sites</p>
+                                    <h3 class="stat-count">1</h3>
                                 </div>
-                                <div class="card-body card-body-role">
-                                    <canvas id="publishActivityChart" height="217" width="703" style="display: block; box-sizing: border-box; height: 217.8px; width: 703px;"></canvas>
+                                <div class="dash-card-img">
+                                    <i class="fa-solid fa-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="card-stat card-red">
+                                <div class="card-content dash-card">
+                                    <p class="">Templates</p>
+                                    <h3 class="stat-count">210</h3>
+                                </div>
+                                <div class="dash-card-img">
+                                    <i class="fa-solid fa-calendar"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Charts Row -->
-                    <div class="row mt-4 g-3">
-                        <div class="col-12 col-xl-6 col-md-6">
-                            <div class="card h-100">
-                                <div class="card-header bg-white">
-                                    <h5 class="mb-0">Total Published Sites Per Month</h5>
-                                    <small class="text-muted">Monthly published vs. unpublished</small>
+                    <!-- Recent Users Lists -->
+                    <div class="row mt-4">
+                        <div class="col-md-12 col-lg-12 col-xl-12">
+                            <div class="section-header">Recent Websites List</div>
+                            <div class="table-wrapper">
+                                <div class="table-responsive">
+                                    <table class="table table-striped dash-table1 recent-user-table mb-0">
+                                        <thead class="table-header">
+                                            <tr class="table-head-title dash-head">
+                                                <th>S.No</th>
+                                                <th>Website Preview</th>
+                                                <th>Date Created On</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="f-18 fw-medium">1</td>
+                                                <td class="f-18">
+                                                    <a href="site-details.html" target="_blank" rel="noopener">testabc17e19648.multiscreensite.com</a>
+                                                </td>
+                                                <td class="f-18">
+                                                    April 13, 2026, 09:33 AM
+                                                </td>
+                                                <td class="f-18">
+                                                    <a class="img-card-btns" href="site-details.html">View</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="card-body card-body-role">
-                                    <canvas id="yearlyPublishActivityChart" height="138" width="447" style="display: block; box-sizing: border-box; height: 138.8px; width: 447px;"></canvas>
-                                </div>
+
+                            </div>
+                            <div class="text-end mt-3">
+                                <a class="btn see-users-btn" href="all-sites.html">See All Sites</a>
                             </div>
                         </div>
-                        <div class="col-12 col-xl-6 col-md-6">
-                            <div class="card h-100">
-                                <div class="card-header bg-white">
-                                    <h5 class="mb-0">Created Websites</h5>
-                                    <small class="text-muted">Previous month vs. this month</small>
-                                </div>
-                                <div class="card-body card-body-role">
-                                    <canvas id="createdSitesChart" height="138" width="447" style="display: block; box-sizing: border-box; height: 138.8px; width: 447px;"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Charts Row -->
-                    <div class="row mt-4 g-3">
-
-                        <!-- Recent Lists -->
-                        <div class="col-12 col-xl-12">
-                            <div class="row h-100 g-3">
-                                <div class="col-12 col-xl-6">
-                                    <div class="section-header">Recent Users List</div>
-                                    <div class="table-wrapper">
-                                        <div class="table-responsive">
-                                            <table class="table table-striped dash-table1 recent-user-table mb-0">
-                                                <thead class="table-header">
-                                                <tr class="table-head-title dash-head">
-                                                    <th>Name</th>
-                                                    <th>Email</th>
-                                                    <th>Date Created On</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="f-18 fw-medium">Staff Test</td>
-                                                        <td class="f-18">staff@one.com</td>
-                                                        <td class="f-18">April 21, 2026, 02:16 PM</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="f-18 fw-medium">agency</td>
-                                                        <td class="f-18">test@agencystaff.com</td>
-                                                        <td class="f-18">April 13, 2026, 11:19 PM</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="f-18 fw-medium">Test Client</td>
-                                                        <td class="f-18">client@one.com</td>
-                                                        <td class="f-18">March 30, 2026, 02:43 PM</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="f-18 fw-medium">Agency Two</td>
-                                                        <td class="f-18">agency@two.com</td>
-                                                        <td class="f-18">March 30, 2026, 02:07 AM</td>
-                                                    </tr>
-                                                     <tr>
-                                                        <td class="f-18 fw-medium">Agency</td>
-                                                        <td class="f-18">agency@one.com</td>
-                                                        <td class="f-18">March 30, 2026, 01:51 AM</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-
-                                    </div>
-                                    <div class="text-end mt-3">
-                                        <a class="btn btn-orange" href="https://sandbox.kangaroodev.co.uk/kuk_sites/admin/users/list">See All Users</a>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-xl-6">
-                                    <div class="section-header">Recent Resellers List</div>
-                                    <div class="table-wrapper">
-                                        <div class="table-responsive">
-                                            <table class="table table-striped dash-table1 recent-user-table mb-0">
-                                                <thead class="table-header">
-                                                <tr class="table-head-title dash-head">
-                                                    <th>Name</th>
-                                                    <th>Email</th>
-                                                    <th>Date Created On</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                        <tr>
-                                                        <td class="f-18 fw-medium">Agency Two</td>
-                                                        <td class="f-18">agency@two.com</td>
-                                                        <td class="f-18">March 30, 2026, 02:07 AM</td>
-                                                    </tr>
-                                                        <tr>
-                                                        <td class="f-18 fw-medium">Agency</td>
-                                                        <td class="f-18">agency@one.com</td>
-                                                        <td class="f-18">March 30, 2026, 01:51 AM</td>
-                                                    </tr>
-                                                                                                </tbody>
-                                            </table>
-                                        </div>
-
-                                    </div>
-                                    <div class="text-end mt-3">
-                                        <a class="btn btn-orange" href="https://sandbox.kangaroodev.co.uk/kuk_sites/admin/users/list">See All Resellers</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

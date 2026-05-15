@@ -459,6 +459,18 @@ main{
     .tem-content-page p {  font-size: 13px!important; }
 
     .img-card-btns {  font-size: 14px!important;  padding: 7px 15px!important; }
+    /* new */
+    .icon-btn {
+        font-size: 16px;
+        padding: 0 5px;
+        width: 34px;
+        height: 34px;
+    }
+    button.icon-btn.show {
+        padding: 6px;
+        height: 36px;
+        width: 36px;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {

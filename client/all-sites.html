@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB-EDITOR</title>
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> -->
+     <link rel="stylesheet" href="../assets/css/web-editor-all.min.css">
+     <link rel="stylesheet" href="../assets/css/web-editor-icon.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
-        <script src="../assets/js/web-editor-jquery.min.js"></script>
-
+    <script src="../assets/js/web-editor-jquery.min.js"></script>
 </head>
 <body>
     <main class="wrapper">
@@ -31,36 +29,6 @@
                     <a class="nav-link" href="all-sites.html">
                         <i class="fa-solid fa-globe me-2"></i>
                         <span>All Sites</span>
-                    </a>
-
-                    <a class="nav-link" href="pending-registrations.html">
-                        <i class="fa-solid fa-user-clock me-2"></i>
-                        <span>Pending Registrations</span>
-                    </a>
-
-                    <a class="nav-link" href="site-builder.html">
-                        <i class="fa-solid fa-layer-group me-2"></i>
-                        <span>Site Builder</span>
-                    </a>
-
-                    <a class="nav-link" href="all-users.html">
-                        <i class="fa-solid fa-users me-2"></i>
-                        <span>All Users</span>
-                    </a>
-
-                    <a class="nav-link" href="site-agency.html">
-                        <i class="fa-solid fa-building-user me-2"></i>
-                        <span>Agency Assigned Sites</span>
-                    </a>
-
-                    <a class="nav-link" href="site-user.html">
-                        <i class="fa-solid fa-user-check me-2"></i>
-                        <span>User Assigned Sites</span>
-                    </a>
-
-                    <a class="nav-link" href="subscriptions.html">
-                        <i class="fa-solid fa-receipt me-2"></i>
-                        <span>Subscriptions</span>
                     </a>
 
                     <a class="nav-link" href="support.html">
@@ -104,8 +72,8 @@
                 <!-- User Profile Section -->
                 <div class="profile-box d-flex align-items-center">
                     <div class="text-end me-3">
-                        <h5 class="profile-title">Super Admin</h5>
-                        <p class="profile-role text-muted">Super Admin</p>
+                        <h5 class="profile-title">Test Client</h5>
+                        <p class="profile-role text-muted"> User</p>
                     </div>
                 </div>
             </div>
@@ -124,9 +92,6 @@
                         </div>
                         <div class="sitebox-wrapper d-flex align-items-center gap-2">
                             
-                            <button id="syncSitesBtn" class="btn btn-orange" >
-                                <i class="bi bi-arrow-repeat"></i> Sync Sites
-                            </button>
                             <!-- Created Dropdown -->
                             <div class="dropdown">
                                 <button class="dropdown-toggle-custom" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-arrow-down-up"></i> Created (Newest)</button>
@@ -230,7 +195,8 @@
                                 <button class="dropdown-toggle-custom btn-success" type="button" id="labelsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="bi bi-tag"></i> Labels
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-labels dropdown-menu-end dropdown-menu-custom label-list-item" aria-labelledby="labelsDropdown" data-popper-placement="bottom-end">                                    <li>
+                                <ul class="dropdown-menu dropdown-menu-labels dropdown-menu-end dropdown-menu-custom label-list-item" aria-labelledby="labelsDropdown" data-popper-placement="bottom-end">
+                                    <li>
                                         <h6 class="dropdown-header">Filter by Label</h6></li>
                                     <li>
                                         <div class="labels-panel px-3 py-1">
@@ -273,16 +239,14 @@
                             </div>
 
                         </div>
-                        
                     </div>
 
-
                     <div class="table-responsive">
-                       <table class="table business-table align-middle">
+                        <table class="table business-table align-middle">
                             <thead>
                                 <tr>
                                     <th></th>
-                                    <th>SITES <span id="sitesCount" class="text-muted">: 51 </span></th>
+                                    <th>SITES</th>
                                     <th></th>
                                     <th>STATUS</th>
                                     <th>SUBSCRIPTION</th>
@@ -295,196 +259,34 @@
                                     <td></td>
                                     <td>
                                         <div class="d-flex align-items-center">
-                                            <img src="../assets/images/site1.png" class="img-fluid site-thumb" alt="">
+                                            <img src="https://irp.cdn-website.com/7088e6cd/screenshots/Screenshot.png?v=1776078298000&amp;updated=true" class="site-thumb" alt="">
                                             <div>
-                                                <p class="site-title mb-0"><strong>www.prudhommeinternational.com</strong></p>
-                                                <p class="site-desc mb-0"><a href="#" target="_blank" rel="noopener">www.prudhommeinternational.com</a></p>
+                                                <p class="site-title mb-0">testabc17e19648.multiscreensite.com</p>
+                                                <p class="site-desc mb-0">Site not published • 13 Apr 2026</p>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
-                                        <button class="icon-btn js-edit-site" data-site-name="f25dcb0c" data-lang="en-gb" title="Edit"><i class="bi bi-pencil"></i></button><a href="site-details.html" title="Show" class="icon-btn"><i class="fa-solid fa-circle-info"></i></a><a href="https://preview.web-editor.ai/preview/f25dcb0c?t=1777382423246"
-                                        target="_blank" title="Preview" class="icon-btn"><i class="fa-solid fa-eye"></i></a></td>
-                                    <td><span class="badge bg-success rounded-pill p-12">Published</span></td>
-                                    <td>-</td>
-                                    <td><span class="badge bg-light text-dark rounded-pill me-1 p-12">Editor 2.0</span></td>
-                                    <td class="table-actions table-action-box">
-                                        <button class="icon-btn action-dot-btn" data-bs-toggle="dropdown" aria-expanded="false"><span class="bi bi-three-dots-vertical"></span></button>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><a class="dropdown-item" href="#">View Site Details</a></li>
-                                        </ul>
+                                        <button class="icon-btn js-edit-site" data-site-name="b6ed6942" data-lang="en" title="Edit">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                        <a href="site-details.html" title="Show" class="icon-btn">
+                                            <i class="fa-solid fa-circle-info"></i>
+                                        </a>
+                                        <a href="#" target="_blank" title="Preview" class="icon-btn">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </a>
                                     </td>
-                                </tr>
-                                <tr>
+                                    <td><span class="badge bg-light text-dark rounded-pill p-12">Unpublished</span></td>
+                                    <td>-</td>
                                     <td></td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <img src="../assets/images/site2.png" class="img-fluid site-thumb" alt="">
-                                            <div>
-                                                <p class="site-title mb-0"><strong>www.coastalvoip.co.za</strong></p>
-                                                <p class="site-desc mb-0"><a href="#" target="_blank" rel="noopener">www.coastalvoip.co.za</a></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <button class="icon-btn js-edit-site" data-site-name="a49f23f6" data-lang="en" title="Edit"><i class="bi bi-pencil"></i></button><a href="site-details.html" title="Show" class="icon-btn"><i class="fa-solid fa-circle-info"></i></a><a href="https://preview.web-editor.ai/preview/a49f23f6?t=1777382423386"
-                                        target="_blank" title="Preview" class="icon-btn"><i class="fa-solid fa-eye"></i></a></td>
-                                    <td><span class="badge bg-success rounded-pill p-12">Published</span></td>
-                                    <td>-</td>
-                                    <td><span class="badge bg-light text-dark rounded-pill me-1 p-12">Editor 2.0</span><span class="badge bg-light text-dark rounded-pill me-1 p-12">API</span></td>
                                     <td class="table-actions table-action-box">
                                         <button class="icon-btn action-dot-btn" data-bs-toggle="dropdown" aria-expanded="false"><span class="bi bi-three-dots-vertical"></span></button>
                                         <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><a class="dropdown-item" href="#">View Site Details</a></li>
+                                            <li><a class="dropdown-item" href="site-details.html">View Site Details</a></li>
                                         </ul>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <img src="../assets/images/site3.png" class="img-fluid site-thumb" alt="">
-                                            <div>
-                                                <p class="site-title mb-0"><strong>www.lazylazyline.com</strong></p>
-                                                <p class="site-desc mb-0"><a href="#" target="_blank" rel="noopener">www.lazylazyline.com</a></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <button class="icon-btn js-edit-site" data-site-name="5bbfa77f" data-lang="en" title="Edit"><i class="bi bi-pencil"></i></button><a href="site-details.html" title="Show" class="icon-btn"><i class="fa-solid fa-circle-info"></i></a><a href="https://preview.web-editor.ai/preview/5bbfa77f?t=1777382423805"
-                                        target="_blank" title="Preview" class="icon-btn"><i class="fa-solid fa-eye"></i></a></td>
-                                    <td><span class="badge bg-success rounded-pill p-12">Published</span></td>
-                                    <td>-</td>
-                                    <td><span class="badge bg-light text-dark rounded-pill me-1 p-12">Editor 2.0</span></td>
-                                    <td class="table-actions table-action-box">
-                                        <button class="icon-btn action-dot-btn" data-bs-toggle="dropdown" aria-expanded="false"><span class="bi bi-three-dots-vertical"></span></button>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><a class="dropdown-item" href="#">View Site Details</a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <img src="../assets/images/site4.png" class="img-fluid site-thumb" alt="">
-                                            <div>
-                                                <p class="site-title mb-0"><strong>www.tradelineroofing.com</strong></p>
-                                                <p class="site-desc mb-0"><a href="#" target="_blank" rel="noopener">www.tradelineroofing.com</a></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <button class="icon-btn js-edit-site" data-site-name="793569bf" data-lang="en-gb" title="Edit"><i class="bi bi-pencil"></i></button><a href="site-details.html" title="Show" class="icon-btn"><i class="fa-solid fa-circle-info"></i></a><a href="https://preview.web-editor.ai/preview/793569bf?t=1777382423903"
-                                        target="_blank" title="Preview" class="icon-btn"><i class="fa-solid fa-eye"></i></a></td>
-                                    <td><span class="badge bg-success rounded-pill p-12">Published</span></td>
-                                    <td>-</td>
-                                    <td><span class="badge bg-light text-dark rounded-pill me-1 p-12">Editor 2.0</span></td>
-                                    <td class="table-actions table-action-box">
-                                        <button class="icon-btn action-dot-btn" data-bs-toggle="dropdown" aria-expanded="false"><span class="bi bi-three-dots-vertical"></span></button>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><a class="dropdown-item" href="#">View Site Details</a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <img src="../assets/images/site5.png" class="img-fluid site-thumb" alt="">
-                                            <div>
-                                                <p class="site-title mb-0"><strong>www.peakprecisioncleaning.co.uk</strong></p>
-                                                <p class="site-desc mb-0"><a href="#" target="_blank" rel="noopener">www.peakprecisioncleaning.co.uk</a></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <button class="icon-btn js-edit-site" data-site-name="c4b1923e" data-lang="en" title="Edit"><i class="bi bi-pencil"></i></button><a href="site-details.html" title="Show" class="icon-btn"><i class="fa-solid fa-circle-info"></i></a><a href="https://preview.web-editor.ai/preview/c4b1923e?t=1777382425134"
-                                        target="_blank" title="Preview" class="icon-btn"><i class="fa-solid fa-eye"></i></a></td>
-                                    <td><span class="badge bg-success rounded-pill p-12">Published</span></td>
-                                    <td>-</td>
-                                    <td><span class="badge bg-light text-dark rounded-pill me-1 p-12">Cleaning services</span><span class="badge bg-light text-dark rounded-pill me-1 p-12">Editor 2.0</span></td>
-                                    <td class="table-actions table-action-box">
-                                        <button class="icon-btn action-dot-btn" data-bs-toggle="dropdown" aria-expanded="false"><span class="bi bi-three-dots-vertical"></span></button>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><a class="dropdown-item" href="#">View Site Details</a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <img src="../assets/images/site6.png" class="img-fluid site-thumb" alt="">
-                                            <div>
-                                                <p class="site-title mb-0"><strong>www.seemoreenergy.co.uk</strong></p>
-                                                <p class="site-desc mb-0"><a href="#" target="_blank" rel="noopener">www.seemoreenergy.co.uk</a></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <button class="icon-btn js-edit-site" data-site-name="e7f76ad5" data-lang="en-gb" title="Edit"><i class="bi bi-pencil"></i></button><a href="site-details.html" title="Show" class="icon-btn"><i class="fa-solid fa-circle-info"></i></a><a href="https://preview.web-editor.ai/preview/e7f76ad5?t=1777382425803"
-                                        target="_blank" title="Preview" class="icon-btn"><i class="fa-solid fa-eye"></i></a></td>
-                                    <td><span class="badge bg-success rounded-pill p-12">Published</span></td>
-                                    <td>-</td>
-                                    <td><span class="badge bg-light text-dark rounded-pill me-1 p-12">Editor 2.0</span></td>
-                                    <td class="table-actions table-action-box">
-                                        <button class="icon-btn action-dot-btn" data-bs-toggle="dropdown" aria-expanded="false"><span class="bi bi-three-dots-vertical"></span></button>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><a class="dropdown-item" href="#">View Site Details</a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <img src="../assets/images/site7.png" class="img-fluid site-thumb" alt="">
-                                            <div>
-                                                <p class="site-title mb-0"><strong>www.jpenlingtonmedia.co.uk</strong></p>
-                                                <p class="site-desc mb-0"><a href="#" target="_blank" rel="noopener">www.jpenlingtonmedia.co.uk</a></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <button class="icon-btn js-edit-site" data-site-name="1a658113" data-lang="en-gb" title="Edit"><i class="bi bi-pencil"></i></button><a href="site-details.html" title="Show" class="icon-btn"><i class="fa-solid fa-circle-info"></i></a><a href="https://preview.web-editor.ai/preview/1a658113?t=1777382425818"
-                                        target="_blank" title="Preview" class="icon-btn"><i class="fa-solid fa-eye"></i></a></td>
-                                    <td><span class="badge bg-success rounded-pill p-12">Published</span></td>
-                                    <td>-</td>
-                                    <td><span class="badge bg-light text-dark rounded-pill me-1 p-12">Editor 2.0</span></td>
-                                    <td class="table-actions table-action-box">
-                                        <button class="icon-btn action-dot-btn" data-bs-toggle="dropdown" aria-expanded="false"><span class="bi bi-three-dots-vertical"></span></button>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><a class="dropdown-item" href="#">View Site Details</a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <img src="../assets/images/site8.png" class="img-fluid site-thumb" alt="">
-                                            <div>
-                                                <p class="site-title mb-0"><strong>www.definity-uk.com</strong></p>
-                                                <p class="site-desc mb-0"><a href="#" target="_blank" rel="noopener">www.definity-uk.com</a></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <button class="icon-btn js-edit-site" data-site-name="20914f99" data-lang="en" title="Edit"><i class="bi bi-pencil"></i></button><a href="site-details.html" title="Show" class="icon-btn"><i class="fa-solid fa-circle-info"></i></a><a href="https://preview.web-editor.ai/preview/20914f99?t=1777382425830"
-                                        target="_blank" title="Preview" class="icon-btn"><i class="fa-solid fa-eye"></i></a></td>
-                                    <td><span class="badge bg-success rounded-pill p-12">Published</span></td>
-                                    <td>-</td>
-                                    <td><span class="badge bg-light text-dark rounded-pill me-1 p-12">Training</span><span class="badge bg-light text-dark rounded-pill me-1 p-12">Editor 2.0</span></td>
-                                    <td class="table-actions table-action-box">
-                                        <button class="icon-btn action-dot-btn" data-bs-toggle="dropdown" aria-expanded="false"><span class="bi bi-three-dots-vertical"></span></button>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><a class="dropdown-item" href="#">View Site Details</a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                             
-                             
                             </tbody>
                         </table>
                     </div>
@@ -494,10 +296,7 @@
                             <li class="page-item disabled">
                                 <a class="page-link" href="#" data-page="0"><i class="bi bi-chevron-left"></i></a>
                             </li>
-                            <li class="page-item active"><a class="page-link" href="#" data-page="1" style="background-color: #f89421 !important; color: #fff !important;">1</a></li>
-                            <li class="page-item "><a class="page-link" href="#" data-page="2">2</a></li>
-                            <li class="page-item disabled"><a class="page-link" href="#">…</a></li>
-                            <li class="page-item"><a class="page-link" href="#" data-page="6">6</a></li>
+                            <li class="page-item active"><a class="page-link" href="#" data-page="1">1</a></li>
                             <li class="page-item "><a class="page-link" href="#" data-page="2"><i class="bi bi-chevron-right"></i></a></li>
                         </ul>
                     </nav>
