@@ -15,7 +15,7 @@
 <body>
     <main class="wrapper">
         <div class="sidebar sidebar-main-box" id="sidebar">
-            <span class="close-sidebar d-lg-none txt-red">×</span>
+            <span class="close-sidebar d-lg-none text-red">×</span>
             <div class="sidebar-content">
                 <div class="logo">
                 <img src="../assets/images/web-dash-white.png" alt="WEB-EDITOR" class="img-fluid">
@@ -142,7 +142,7 @@
                                             <label class="form-label">Profile Photo <i class="fa fa-info-circle text-dark" title="Upload a square image for best results. Max 2MB."></i></label>
                                             <input type="file" id="profile_photo" name="profile_photo" class="form-control box-radius-50 " accept="image/*">
                                             <div class="mt-2" id="image-preview-container" style="display:none;">
-                                                <img id="image-preview" src="#" alt="Preview" class="img-fluid rounded" style="max-height: 150px;">
+                                                <img id="image-preview" src="#" alt="Preview" class="img-fluid rounded max-h-150">
                                             </div>
                                         </div>
                                     </div>
@@ -187,7 +187,7 @@
 
 
 
-                                    <button type="submit" class="btn btn-main" >Update Profile</button>
+                                    <button type="submit" class="btn btn-main btn-md" >Update Profile</button>
                                 </form>
 
                                 <!-- Password Change -->
@@ -220,7 +220,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-main" >Change Password</button>
+                                        <button type="submit" class="btn btn-main btn-md" >Change Password</button>
                                     </form>
                                 </div>
 
@@ -241,13 +241,22 @@
                                                         <i class="fa fa-info-circle text-dark ms-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Toggle to show or hide the notice banner across the application."></i>
                                                     </label>
                                                 </div>
-
+                                            </div>
+                                            <div class="col-md-8" id="admin_notice_text_wrapper" style="display: none;">
+                                                <label for="admin_notice_title" class="form-label">
+                                                    Admin Notice Text
+                                                    <i class="fa fa-info-circle text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="This text will be displayed as a notice banner to all users when active."></i>
+                                                </label>
+                                                <textarea name="admin_notice_title" id="admin_notice_title" class="form-control " rows="3" placeholder="Enter notice text here..." required="required"></textarea>
+                                                   <div class="form-text">
+                                                    This notice will appear at the top of all pages when activated.
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div class="row">
                                             <div class="col-12">
-                                                <button type="submit" class="btn btn-main" >
+                                                <button type="submit" class="btn btn-main btn-md" >
                                                     Save Notice Settings
                                                 </button>
                                             </div>
@@ -268,6 +277,27 @@
 
     <div class="sidebar-overlay overlay" id="sidebarOverlay"></div>
 
+    <script>
+$(document).ready(function () {
+
+    // Initially hide/show based on checked state
+    if ($('#admin_notice_active').is(':checked')) {
+        $('#admin_notice_text_wrapper').show();
+    } else {
+        $('#admin_notice_text_wrapper').hide();
+    }
+
+    // Toggle on switch change
+    $('#admin_notice_active').on('change', function () {
+        if ($(this).is(':checked')) {
+            $('#admin_notice_text_wrapper').slideDown();
+        } else {
+            $('#admin_notice_text_wrapper').slideUp();
+        }
+    });
+
+});
+</script>
     <!-- javascript  -->
     <script src="../assets/js/app.js"></script>
     <script src="../assets/js/main.js"></script>

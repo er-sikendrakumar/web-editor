@@ -15,7 +15,7 @@
 <body>
     <main class="wrapper">
         <div class="sidebar sidebar-main-box" id="sidebar">
-            <span class="close-sidebar d-lg-none txt-red">×</span>
+            <span class="close-sidebar d-lg-none text-red">×</span>
             <div class="sidebar-content">
                 <div class="logo">
                 <img src="../assets/images/your-logo-white.png" alt="WEB-EDITOR" class="img-fluid">
@@ -147,8 +147,8 @@
                                 <div class="card-body">
                                     <div class="row align-items-end g-3">
                                         <div class="col-md-4">
-                                            <div style="flex-direction: column !important;" class="d-flex">
-                                                <label for="dateRangeFilter" style="margin-bottom: 4px !important;font-size:20px !important;" class="form-label fw-bold date-label">Filter Date Range</label>
+                                            <div  class="d-flex flex-column">
+                                                <label for="dateRangeFilter" class="form-label fw-bold date-label text-20 mb-1">Filter Date Range</label>
                                                 <select id="dateRangeFilter" class="form-select">
                                                     <option value="current">Current Month</option>
                                                     <option value="6months" selected>Past 6 Months</option>
@@ -201,9 +201,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-3 g-3" style="padding-left: calc(var(--bs-gutter-x) * .5); justify-content: center;">
+                    <div class="row mt-3 g-3 justify-content-center">
                         <div class="card-stat card-web-rate">
-                                <div class="card-content dash-card" style="gap: 0px;">
+                                <div class="card-content dash-card gap-0">
                                     <h5 class="mb-0">Website Churn Rate</h5>
                                     <small class="text-muted">Percentage of sites that became unpublished in the past 6 months</small>
                                     <h3 class="stat-count">0.0%</h3>
