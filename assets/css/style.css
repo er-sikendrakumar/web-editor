@@ -210,7 +210,7 @@ a:hover {
 .btn {
     border-radius: 50px !important;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 22px;
     padding: 6px 12px;
     border:0;
@@ -220,7 +220,7 @@ a:hover {
 }
 .btn-lg {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 24px;
     padding: 8px 16px;
 }
@@ -321,7 +321,7 @@ a:hover {
 }
 
 .badge {
-    font-weight: 500;
+    font-weight: 400;
     padding: 8px 14px;
     font-size: 13px;
     line-height: 20px;
@@ -332,7 +332,7 @@ a:hover {
     border-radius: 50px;;
 }
 .badge.badge-published{
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
 }
 
@@ -766,6 +766,7 @@ tr.table-head-title.dash-head th {
     font-size: 16px;
     font-weight: 400;
 }
+.site-details-btn{font-weight: 400 !important;}
 
 .recent-user-table.table>:not(caption)>*>* {
     background-color: #f2f2f2;
@@ -936,7 +937,7 @@ tr.reseller-head.web-list-head th,.custom-pagination.reseller-pagin .page-item.a
     text-decoration: none;
     border-radius: 50px;
     margin: 20px 0 0;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 15px;
     line-height: 22px;
     padding: 7px 14px;
@@ -982,42 +983,7 @@ tr.reseller-head.web-list-head th,.custom-pagination.reseller-pagin .page-item.a
 
 .recent-user-table tbody tr td:first-child { font-weight: 500;}
 
-/* .create-button {
-    background-color: var(--color-white);
-    border: 1px solid orange;
-    color: orange;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-weight: 500;
-}
-
-.create-button:hover {
-    background-color: orange;
-    color: var(--color-white);
-} */
-
 .profile-card { background-color: var(--color-white);  padding: 2rem;}
-
-/* .btn-save {
-    background-color: var(--color-black);
-    color: var(--color-white);
-    border-radius: 25px;
-    padding: 8px 20px;
-}
-
-.btn-cancel {
-    background-color: #e0e0e0;
-    color: var(--color-black);
-    border-radius: 25px;
-    padding: 8px 20px;
-} */
-
-/* .btn-action {
-    background-color: var(--color-black);
-    color: var(--color-white);
-    border-radius: 20px;
-    padding: 6px 18px;
-} */
 
 .btn-show {
     background: none;
@@ -1035,8 +1001,7 @@ tr.reseller-head.web-list-head th,.custom-pagination.reseller-pagin .page-item.a
     height: 100%;
 }
 
-.avatar-card .top { height: 316px; position: relative;
-}
+.avatar-card .top { height: 316px; position: relative;}
 
 .manage-profile-edit { background: var(--color-white); height: 42%;}
 
@@ -1135,8 +1100,6 @@ tr.reseller-head.web-list-head th,.custom-pagination.reseller-pagin .page-item.a
 
 .sidebar.collapsed button.signout-btn { padding: 9px 10px;}
 
-/* .signout-btn {  max-width: 200px; width: 100%!important;} */
-
 .ps-4 { padding-left: 2.2rem!important; border-radius: 50px;}
 
 input[type=text]:not(.registration-input),
@@ -1233,20 +1196,6 @@ select {
     transition-duration: .15s;
     color: var(--color-dark-grey);
 }
-
-/* #syncSitesBtn {
-    padding: 6px 12px;
-    background-color: var(--color-orange);
-    border: none;
-    transition-duration: .15s;
-    font-size: 14px;
-    line-height: 23px;
-} */
-
-/* #syncSitesBtn:hover {
-    background-color: #f80;
-    transition-duration: .15s
-} */
 
 .site-title {
     font-size: 14px;
@@ -1481,7 +1430,7 @@ form.top_search_form input[type=text] {   margin-top: 0!important;}
 .btn-create {
     background: #20c997;
     color: var(--color-white);
-    font-weight: 500;
+    font-weight: 400;
     border-radius: 24px;
     padding: 8px 22px;
 }
@@ -1505,7 +1454,7 @@ form.top_search_form input[type=text] {   margin-top: 0!important;}
     background: #f6f7f9;
     color: var(--color-dark-grey);
     border-radius: 20px;
-    font-weight: 500;
+    font-weight: 400;
     padding: 6px 18px;
     font-size: 15px;
     display: flex;
@@ -1645,7 +1594,7 @@ form.top_search_form input[type=text] {   margin-top: 0!important;}
     color: var(--color-dark-grey);
     border: none;
     background: #f6f7f9;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     transition: background 0.2s, color 0.2s;
 }
@@ -1720,3 +1669,4 @@ button.icon-btn.show {
     background-color: var(--color-orange);
     color: var(--color-white);
 }
+

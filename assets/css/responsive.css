@@ -598,6 +598,20 @@ main{
     .nav.side-nav-box .nav-link i:before { width: 20px; font-size: 17px; }
 
     .nav.side-nav-box .nav-link img { width: 40px; }
+    /* .side-nav-box {
+        padding-left: 10px;
+        gap: 5px;
+        margin-bottom: 20px;
+        height: calc(100vh - 220px);
+        overflow: auto !important;
+        flex-wrap: nowrap;
+        scrollbar-width: none; 
+        -ms-overflow-style: none; 
+    }
+
+    .side-nav-box::-webkit-scrollbar {
+        display: none; 
+    } */
 
     .side-nav-box { padding-left: 10px; gap: 5px; margin-bottom: 20px; }
 
